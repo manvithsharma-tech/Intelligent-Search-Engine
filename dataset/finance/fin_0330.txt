@@ -1,0 +1,3 @@
+Creditor Rights, Enforcement, and Bank Loans
+
+ABSTRACT We examine whether differences in legal protection affect the size, maturity, and interest rate spread on loans to borrowers in 48 countries. Results show that banks respond to poor enforceability of contracts by reducing loan amounts, shortening loan maturities, and increasing loan spreads. These effects are both statistically significant and economically large. While stronger creditor rights reduce spreads, they do not seem to matter for loan size and maturity. Overall, we show that variation in enforceability of contracts matters a great deal more to how loans are structured and how they are priced.

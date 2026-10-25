@@ -1,0 +1,3 @@
+Probing quantum field theory particle mixing and dark-matter-like effects with Rydberg atoms
+
+Abstract We analyze the oscillations of Rydberg atoms in the framework of quantum field theory and analyze the analogy with flavor mixing and oscillations. We reveal a non trivial vacuum energy which has the equation of state analogous to that of cold dark matter. This energy is formally similar to that expected for mixed neutrinos and affects the thermal capacity of the gas. Therefore, deflection of the thermal capacity of Rydberg atoms could prove the condensate structure of vacuum for mixing fermions and open new scenarios in the study of the dark components of the universe. We also derive new Rabi oscillation formulae which are, in principle, testable experimentally.

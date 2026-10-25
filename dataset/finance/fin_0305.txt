@@ -1,0 +1,3 @@
+Liquidity, Business Cycles, and Monetary Policy
+
+The paper presents a model of a monetary economy where there are differences in liquidity across assets.Money circulates because it is more liquid than other assets, not because it has any special function.There is a spectrum of returns on assets, reflecting their differences in liquidity.The model is used, first, to investigate how aggregate activity and asset prices fluctuate with shocks to productivity and liquidity; second, to examine what role government policy might have through open market operations that change the mix of assets held by the private sector.With its emphasis on liquidity rather than sticky prices, the model harks back to an earlier interpretation of Keynes (1936), following Tobin (1969).

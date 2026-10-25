@@ -1,0 +1,3 @@
+Liquidity Trap and Excessive Leverage
+
+We investigate the role of macroprudential policies in mitigating liquidity traps. When constrained households engage in deleveraging, the interest rate needs to fall to induce unconstrained households to pick up the decline in aggregate demand. If the fall in the interest rate is limited by the zero lower bound, aggregate demand is insufficient and the economy enters a liquidity trap. In this environment, households' ex ante leverage and insurance decisions are associated with aggregate demand externalities. Welfare can be improved with macroprudential policies targeted toward reducing leverage. Interest rate policy is inferior to macroprudential policies in dealing with excessive leverage. (JEL D14, E23, E32, E43, E52, E61, E62)

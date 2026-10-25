@@ -1,0 +1,46 @@
+# Build & Compiler Output
+out/
+bin/
+build/
+dist/
+
+# IDE & Editor Configs
+.idea/
+*.iml
+.metadata/
+.vscode/
+.kotlin
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Backups & Raw Scraping / Import Working Directories
+data_import/
+*.bak
+*.bak*
+*.tmp
+*.backup*
+_backup_dataset_original/
+_backup_original/
+temp_dataset/
+staging_new_articles/
+scratch/
+Output/
+webb/
+src.zip
+
+# Runtime temporary logs
+*.log*pre_*
+*backup*

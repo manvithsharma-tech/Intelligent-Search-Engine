@@ -1,0 +1,3 @@
+Graviton to photon conversion via parametric resonance
+
+We study the parametric resonance excitation of the electromagnetic field by a gravitational wave. We show that there is narrow band resonance. For an electromagnetic field in the vacuum the resonance occurs only in the second band, and its strength is thus suppressed by two powers of amplitude of the gravitational wave. On the other hand, in the case of an electromagnetic field in a medium with the speed of light smaller than 1 (in natural units), there is a band of Fourier modes which undergo resonance in the first band.

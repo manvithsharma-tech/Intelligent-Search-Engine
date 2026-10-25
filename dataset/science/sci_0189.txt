@@ -1,0 +1,3 @@
+Light of Planck-2015 on Noncanonical Inflation
+
+Slow-roll inflationary scenario is considered in noncanonical scalar field model supposing a power-law function for kinetic term and using two formalisms. In the first approach, the potential is picked out as a power-law function, that is, the most common approach in studying inflation. Hamilton-Jacobi approach is selected as the second formalism, so that the Hubble parameter is introduced as a function of scalar field instead of the potential. Employing the last observational data, the free parameters of the model are constrained, and the predicted form of the potential and attractor behavior of the model are studied in detail.

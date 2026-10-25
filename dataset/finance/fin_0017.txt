@@ -1,0 +1,3 @@
+Measuring the Macroeconomic Impact of Monetary Policy at the Zero Lower Bound
+
+This paper employs an approximation that makes a nonlinear term structure model extremely tractable for analysis of an economy operating near the zero lower bound for interest rates. We show that such a model offers an excellent description of the data compared to the benchmark model and can be used to summarize the macroeconomic effects of unconventional monetary policy. Our estimates imply that the efforts by the Federal Reserve to stimulate the economy since July 2009 succeeded in making the unemployment rate in December 2013 1% lower, which is 0.13% more compared to the historical behavior of the Fed.

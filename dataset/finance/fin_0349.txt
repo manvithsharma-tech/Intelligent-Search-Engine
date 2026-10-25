@@ -1,0 +1,3 @@
+Stressed, Not Frozen: The Federal Funds Market in the Financial Crisis
+
+ABSTRACT We examine the importance of liquidity hoarding and counterparty risk in the U.S. overnight interbank market during the financial crisis of 2008. Our findings suggest that counterparty risk plays a larger role than does liquidity hoarding: the day after Lehman Brothers' bankruptcy, loan terms become more sensitive to borrower characteristics. In particular, poorly performing large banks see an increase in spreads of 25 basis points, but are borrowing 1% less, on average. Worse performing banks do not hoard liquidity. While the interbank market does not freeze entirely, it does not seem to expand to meet latent demand.

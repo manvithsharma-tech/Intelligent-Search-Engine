@@ -1,0 +1,3 @@
+Bank Bonds: Size, Systemic Relevance and the Sovereign
+
+Abstract I analyse the risk premium on bank bonds at origination with special focus on the role of implicit and explicit public guarantees and the systemic relevance of issuing institutions. Looking at the asset swap spread on 5,500 bonds, I find that explicit guarantees and sovereign creditworthiness have a substantial effect on the risk premium. In addition, while large institutions still enjoy lower issuance costs linked to the too‐big‐to‐fail (TBTF) framework, I find evidence of enhanced market discipline for systemically important banks, which have faced an increased premium on bond placements since the onset of the financial crisis.

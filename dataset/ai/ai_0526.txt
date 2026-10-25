@@ -1,0 +1,3 @@
+Recent Progress on Generative Adversarial Networks (GANs): A Survey
+
+Generative adversarial network (GANs) is one of the most important research avenues in the field of artificial intelligence, and its outstanding data generation capacity has received wide attention. In this paper, we present the recent progress on GANs. First, the basic theory of GANs and the differences among different generative models in recent years were analyzed and summarized. Then, the derived models of GANs are classified and introduced one by one. Third, the training tricks and evaluation metrics were given. Fourth, the applications of GANs were introduced. Finally, the problem, we need to address, and future directions were discussed.

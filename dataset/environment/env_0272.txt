@@ -1,0 +1,3 @@
+The role of hydrogen for future internal combustion engines
+
+In order to successfully cope with the trend of mitigating climate change as outlined in the recommendations of Paris (COP21) and Glasgow (COP26) Climate Agreements, propulsion technologies must be able to achieve the highest CO2 reduction, within very short time scales. To achieve this challenging goal, electric powertrains powered by batteries charged using renewable energy represents not only a public mandate but also the focus of research efforts of the relevant academic and industrial communities. However, this technology cannot answer all the various needs concerning personal mobility, sustainability and feasibility.

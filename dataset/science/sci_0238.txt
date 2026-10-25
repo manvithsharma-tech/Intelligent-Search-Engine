@@ -1,0 +1,3 @@
+Holographic Aspects of a Relativistic Nonconformal Theory
+
+We study a general D -dimensional Schwarzschild-type black brane solution of the Einstein-dilaton theory and derive, by using the holographic renormalization, its thermodynamics consistent with the geometric results. Using the membrane paradigm, we calculate the several hydrodynamic transport coefficients and compare them with the results obtained by the Kubo formula, which shows the self-consistency of the gauge/gravity duality in the relativistic nonconformal theory. In order to understand more about the relativistic non-conformal theory, we further investigate the binding energy, drag force, and holographic entanglement entropy of the relativistic non-conformal theory.

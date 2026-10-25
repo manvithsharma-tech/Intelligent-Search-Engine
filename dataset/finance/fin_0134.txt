@@ -1,0 +1,3 @@
+Stock Market Openings: Experience of Emerging Economies
+
+This article is an exploratory examination of the benefits and risks associated with opening of stock markets. Specifically, we estimate changes in the level and volatility of stock returns, inflation, and exchange rates around market openings. We find that stock returns increase immediately after market opening without a concomitant increase in volatility. Stock markets become more efficient as determined by testing the random walk hypothesis. We find no evidence of an increase in inflation or an appreciation of exchange rates. If anything, inflation seems to decrease after market opening as do the volatility of inflation and volatility of exchange rates.

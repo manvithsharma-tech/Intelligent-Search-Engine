@@ -1,0 +1,3 @@
+Frontiers of Real-Time Data Analysis
+
+In the past ten years, researchers have explored the impact of data revisions in many different contexts. Researchers have examined the properties of data revisions, how structural modeling is affected by data revisions, how data revisions affect forecasting, the impact of data revisions on monetary policy analysis, and the use of real-time data in current analysis. This paper summarizes many of the questions for which real-time data analysis has provided answers. In addition, researchers and institutions have developed better real-time data sets around the world. Still, additional research is needed in key areas and research to date has uncovered even more fruitful areas worth exploring. (JEL C52, C53, C80, E01)

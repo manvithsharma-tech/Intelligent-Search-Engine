@@ -1,0 +1,3 @@
+Credit Spreads and Monetary Policy
+
+We consider the desirability of modifying a standard Taylor rule for interest rate policy to incorporate adjustments for measures of financial conditions. We consider the consequences of such adjustments for the way policy would respond to a variety of disturbances, using the dynamic stochastic general equilibrium model with credit frictions developed in Cúrdia and Woodford (2009a) . According to our model, an adjustment for variations in credit spreads can improve upon the standard Taylor rule, but the optimal size of adjustment depends on the source of the variation in credit spreads. A response to the quantity of credit is less likely to be helpful.

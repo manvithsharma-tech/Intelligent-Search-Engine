@@ -1,0 +1,3 @@
+Changes in the Federal Reserve's Inflation Target: Causes and Consequences
+
+This paper estimates a New Keynesian model to draw inferences about the behavior of the Federal Reserve's unobserved inflation target. The results indicate that the target rose from 1 1/4% in 1959 to over 8% in the mid to late 1970s before falling back below 2 1/2% in 2004. The results also provide some support for the hypothesis that over the entire post‐war period, Federal Reserve policy has systematically translated short‐run price pressures set off by supply‐side shocks into more persistent movements in inflation itself, although considerable uncertainty remains about the true source of shifts in the inflation target.

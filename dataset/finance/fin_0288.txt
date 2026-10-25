@@ -1,0 +1,3 @@
+Phillips Curve Inflation Forecasts
+
+This paper surveys the literature since 1993 on pseudo out-of-sample evaluation of inflation forecasts in the United States and conducts an extensive empirical analysis that recapitulates and clarifies this literature using a consistent data set and methodology.The literature review and empirical results are gloomy and indicate that Phillips curve forecasts (broadly interpreted as forecasts using an activity variable) are better than other multivariate forecasts, but their performance is episodic, sometimes better than and sometimes worse than a good (not naïve) univariate benchmark.We provide some preliminary evidence characterizing successful forecasting episodes.

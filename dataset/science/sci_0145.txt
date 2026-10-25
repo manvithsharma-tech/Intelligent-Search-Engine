@@ -1,0 +1,3 @@
+Dark energy: back to Newton?
+
+Dark energy is one of the biggest mysteries in science. In this article the origin of the concept is traced as far back as Newton and Hooke in the 17th century. Newton considered, along with the inverse-square law, a force of attraction that varies linearly with distance. A direct link can be made between this term and Einstein's cosmological constant, Λ, and this leads to a possible relation between Λ and the total mass of the universe. Mach's influence on Einstein is discussed and the convoluted history of Λ throughout the last 90 years is coherently presented.

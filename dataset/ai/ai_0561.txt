@@ -1,0 +1,3 @@
+Developmental robotics: a survey
+
+Developmental robotics is an emerging field located at the intersection of robotics, cognitive science and developmental sciences. This paper elucidates the main reasons and key motivations behind the convergence of fields with seemingly disparate interests, and shows why developmental robotics might prove to be beneficial for all fields involved. The methodology advocated is synthetic and two-pronged: on the one hand, it employs robots to instantiate models originating from developmental sciences; on the other hand, it aims to develop better robotic systems by exploiting insights gained from studies on ontogenetic development. This paper gives a survey of the relevant research issues and points to some future research directions.

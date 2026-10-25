@@ -1,0 +1,3 @@
+International Currencies and Capital Allocation
+
+We establish currency as an important factor shaping global portfolios.Using a new securitylevel dataset, we demonstrate that investor holdings are biased toward their own currencies to such an extent that countries typically hold most of the foreign debt securities denominated in their currency.While large firms issue in foreign currency and borrow from foreigners, most firms issue only in local currency and do not directly access foreign capital.These patterns hold broadly across countries except for the United States, as foreign investors hold significant shares of US dollar bonds.The share of dollar-denominated cross-border holdings surged after 2008.

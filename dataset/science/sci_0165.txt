@@ -1,0 +1,3 @@
+Dark Matter Superfluidity
+
+In these lectures I describe a theory of dark matter superfluidity developed in the last few years. The dark matter particles are axion-like, with masses of order eV. They Bose-Einstein condense into a superfluid phase in the central regions of galaxy halos. The superfluid phonon excitations in turn couple to baryons and mediate a long-range force (beyond Newtonian gravity). For a suitable choice of the superfluid equation of state, this force reproduces the various galactic scaling relations embodied in Milgrom's law. Thus the dark matter and modified gravity phenomena represent different phases of a single underlying substance, unified through the rich and well-studied physics of superfluidity.

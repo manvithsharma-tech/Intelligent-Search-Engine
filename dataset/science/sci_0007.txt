@@ -1,0 +1,3 @@
+Physics beyond colliders at CERN: beyond the Standard Model working group report
+
+Abstract The Physics Beyond Colliders initiative is an exploratory study aimed at exploiting the full scientific potential of the CERN's accelerator complex and scientific infrastructures through projects complementary to the LHC and other possible future colliders. These projects will target fundamental physics questions in modern particle physics. This document presents the status of the proposals presented in the framework of the Beyond Standard Model physics working group, and explore their physics reach and the impact that CERN could have in the next 10 - 20 years on the international landscape.

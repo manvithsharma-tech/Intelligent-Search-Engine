@@ -1,0 +1,3 @@
+Money, Debt, and Economic Activity
+
+The paper develops an alternative to the standard IS-LM framework. There are two asset markets and three prices -- the prices of real assets, financial assets, and output. Costs of adjustment and information prevent output prices and output from adjusting instantaneously. Both the size of deficits and the method of financing affect output and prices. Some principal implications are derived. Several of these are also demonstrated, using a graph to show the interaction of asset markets, output markets, and the financing of the budget deficit. Some main implications of standard analysis are rejected. The basis for several "monetarist" conclusions is shown.

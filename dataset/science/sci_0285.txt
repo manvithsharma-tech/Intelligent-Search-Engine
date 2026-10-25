@@ -1,0 +1,3 @@
+Carrollian Yang-Mills theory
+
+Abstract By doing a small c (speed of light) expansion of SU(N) Yang-Mills fields, we construct two different electric and two different magnetic sectors actions of Carrollian Yang-Mills theory. For both electric and magnetic cases, one sector contains non-trivial self-interaction, and another is N2− 1 copies of respective sector Carrollian abelian theory. In d = 4, all the four sectors are invariant under infinite Carrollian Conformal symmetry. There are no central extensions when analyzing charge algebra at the phase space level. Lastly, we compute propagators for all four sectors and vertices for two non-trivial sectors. Propagators in position space show ultra-local behavior.

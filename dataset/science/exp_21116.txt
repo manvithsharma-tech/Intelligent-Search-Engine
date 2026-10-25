@@ -1,0 +1,3 @@
+What Your Data Scientist Wishes You Knew By Daniel Wesley Big data: It's the topic on everyone's lips.
+
+Even high schoolers are clamoring to get into the data science

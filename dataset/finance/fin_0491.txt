@@ -1,0 +1,3 @@
+Identifying Uncertainty Shocks Using the Price of Gold
+
+We propose an instrument to identify uncertainty shocks in a proxy structural vector autoregressive model (SVAR). The instrument equals the variations in the price of gold around events associated with unexpected changes in uncertainty. These variations correlate with uncertainty shocks because gold is perceived as a safe haven asset. To control for news‐related effects associated with the events we identify uncertainty and news shocks jointly, developing a set‐identified proxy SVAR. We find that the popular recursive approach underestimates the effects of uncertainty shocks and delivers responses for economic activity and monetary policy that have more in common with news shocks than with uncertainty shocks.

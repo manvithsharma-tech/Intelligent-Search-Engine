@@ -1,0 +1,3 @@
+Memory formation in matter
+
+Many forms of memory can be stored in the materials around us. Examples are hysteresis in magnets, aging and rejuvenation in glasses, shape memory in alloys, and echoes in spin systems and capillary waves. Once the material is fully equilibrated, memory of the system's initial conditions or previous history is completely lost. Memory is thus intimately connected to out-of-equilibrium behavior. This paper reviews examples where specific inputs can be stored in condensed-matter systems and then retrieved by appropriate protocols. It describes some common principles and questions that emerge from looking for the underlying shared elements in these apparently disparate systems.

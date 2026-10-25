@@ -1,0 +1,3 @@
+The Determinants of Banking Crises
+
+The paper studies the factors associated with the emergence of systemic banking crises in a large sample of developed and developing countries in 1980 - 94, using a multivariate logit econometric model. The results suggest that crises tend to erupt when the macroeconomic environment is weak, particularly when growth is low and inflation is high. Also, high real interest rates are clearly associated with systemic banking sector problems, and there is some evidence that vulnerability to balance of payments crises has played a role. Countries with an explicit deposit insurance scheme were particularly at risk, as were countries with weak law enforcement.

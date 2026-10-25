@@ -1,0 +1,3 @@
+Twitter Warns Users To Change All Their Passwords
+
+Twitter Warns Users To Change All Their Passwords After Finding Bug An "internal defect" led users' account passwords to be stored in an internal log, the company said.

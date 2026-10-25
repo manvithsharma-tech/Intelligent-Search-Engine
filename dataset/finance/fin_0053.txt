@@ -1,0 +1,3 @@
+Fiscal Stimulus in a Monetary Union: Evidence from US Regions
+
+We use rich historical data on military procurement to estimate the effects of government spending. We exploit regional variation in military buildups to estimate an "open economy relative multiplier" of approximately 1.5. We develop a framework for interpreting this estimate and relating it to estimates of the standard closed economy aggregate multiplier. The latter is highly sensitive to how strongly aggregate monetary and tax policy "leans against the wind." Our open economy relative multiplier "differences out" these effects because monetary and tax policies are uniform across the nation. Our evidence indicates that demand shocks can have large effects on output. (JEL E12, E32, E62, F33, H56, H57, R12)

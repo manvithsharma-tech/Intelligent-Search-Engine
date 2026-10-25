@@ -1,0 +1,3 @@
+Precautionary Hoarding of Liquidity and Interbank Markets: Evidence from the Subprime Crisis
+
+Abstract We study the liquidity demand of large settlement banks in the UK and its effect on the money markets before and during the subprime crisis of 2007 - 08. We find that the liquidity demand of large settlement banks experienced a 30% increase in the period immediately following August 9 2007, the day when money markets froze, igniting the crisis. Following this shift, liquidity demand had a precautionary nature in that it rose on days of high payment activity and for banks with greater credit risk. This caused overnight interbank rates to rise, an effect virtually absent in the precrisis period.

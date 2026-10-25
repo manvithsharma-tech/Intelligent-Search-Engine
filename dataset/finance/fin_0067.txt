@@ -1,0 +1,3 @@
+The Time-Varying NAIRU and its Implications for Economic Policy
+
+The NAIRU, the unemployment rate consistent with a constant rate of inflation, is estimated, in this paper, as a parameter allowed to vary over time. Value is determined in an econometric model where the inflation rate depends on its past values, demand and supply shocks. The NAIRU estimated for the GDP deflator varies over the past forty years within 5.4 to 6.5 percent; its estimated value for the most recent quarter (1996:Q2) is 5.6 percent. The NAIRU has declined in recent years in response to global competition, immigration, other factors weakening labor's bargaining position, and the rapidly declining prices of computers and other electronics.

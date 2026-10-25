@@ -1,0 +1,3 @@
+Equilibrium Yield Curves
+
+This paper considers how the role of inflation as a leading business-cycle indicator affects the pricing of nominal bonds.We examine a representative agent asset pricing model with recursive utility preferences and exogenous consumption growth and inflation.We solve for yields under various assumptions on the evolution of investor beliefs.If inflation is bad news for consumption growth, the nominal yield curve slopes up.Moreover, the level of nominal interest rates and term spreads are high in times when inflation news are harder to interpret.This is relevant for periods such as the early 1980s, when the joint dynamics of inflation and growth was not well understood.

@@ -1,0 +1,3 @@
+The Econometrics of DSGE Models
+
+In this paper, I review the literature on the formulation and estimation of dynamic stochastic general equilibrium (DSGE) models with a special emphasis on Bayesian methods.First, I discuss the evolution of DSGE models over the last couple of decades.Second, I explain why the profession has decided to estimate these models using Bayesian methods.Third, I briefly introduce some of the techniques required to compute and estimate these models.Fourth, I illustrate the techniques under consideration by estimating a benchmark DSGE model with real and nominal rigidities.I conclude by offering some pointers for future research.

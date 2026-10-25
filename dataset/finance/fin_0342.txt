@@ -1,0 +1,3 @@
+Contagion in Financial Networks
+
+The recent financial crisis has prompted much new research on the interconnectedness of the modern financial system and the extent to which it contributes to systemic fragility. Network connections diversify firms' risk exposures, but they also create channels through which shocks can spread by contagion. We review the extensive literature on this issue, with the focus on how network structure interacts with other key variables such as leverage, size, common exposures, and short-term funding. We discuss various metrics that have been proposed for evaluating the susceptibility of the system to contagion and suggest directions for future research. (JEL D85, E44, G01, G21, G22, G23, G28)

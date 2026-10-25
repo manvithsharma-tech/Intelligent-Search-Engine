@@ -1,0 +1,3 @@
+Multinational Banks and the Global Financial Crisis: Weathering the Perfect Storm?
+
+We use data on the 48 largest multinational banking groups to compare the lending of their 199 foreign subsidiaries during the Great Recession with lending by a benchmark of 202 domestic banks. Contrary to earlier and more contained crises, parent banks were not a significant source of strength to their subsidiaries during 2008 - 09. When controlling for other bank characteristics,multinational bank subsidiaries had to slowdown credit growth almost three times as fast as domestic banks. This was in particular the case for subsidiaries of banking groups that relied more on wholesale funding.

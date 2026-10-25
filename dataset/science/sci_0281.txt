@@ -1,0 +1,3 @@
+Testing a Dilaton Gravity Model Using Nucleosynthesis
+
+Big bang nucleosynthesis (BBN) offers one of the most strict evidences for the Λ -CDM cosmology at present, as well as the cosmic microwave background (CMB) radiation. In this work, our main aim is to present the outcomes of our calculations related to primordial abundances of light elements, in the context of higher dimensional steady-state universe model in the dilaton gravity. Our results show that abundances of light elements (primordial D,3He,4He, T, and7Li) are significantly different for some cases, and a comparison is given between a particular dilaton gravity model and Λ -CDM in the light of the astrophysical observations.

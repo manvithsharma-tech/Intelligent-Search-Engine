@@ -1,0 +1,3 @@
+Market Liquidity After the Financial Crisis
+
+This article examines market liquidity in the postcrisis era in light of concerns that regulatory changes might have reduced dealers' ability and willingness to make markets. We begin with a discussion of the broader trading environment, including an overview of regulations and their potential effects on dealer balance sheets and market making, but also considering additional drivers of market liquidity. We document a stagnation of dealer balance sheets after the financial crisis of 2007 - 2009, which occurred concurrently with dealer balance sheet deleveraging. However, using high-frequency trade and quote data for US Treasuries and corporate bonds, we find only limited evidence of a deterioration in market liquidity.

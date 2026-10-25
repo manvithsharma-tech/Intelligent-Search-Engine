@@ -1,0 +1,3 @@
+The predictive power of the term structure of interest rates in Europe and the United States: Implications for the European Central Bank
+
+This paper examines the relationship of the term structure of interest rates to monetary policy instruments and to subsequent real activity and inflation in both Europe and the United States. The results show that monetary policy is an important determinant of the term structure spread, but is unlikely to be the only determinant. In addition, there is significant predictive power for both real activity and inflation. The yield curve is thus a simple and accurate measure that should be viewed as one piece of useful information which, along with other information, can be used to help guide European monetary policy.

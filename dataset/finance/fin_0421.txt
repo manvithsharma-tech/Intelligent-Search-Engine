@@ -1,0 +1,3 @@
+Local Currency Sovereign Risk
+
+ABSTRACT We introduce a new measure of emerging market sovereign credit risk: the local currency credit spread, defined as the spread of local currency bonds over the synthetic local currency risk‐free rate constructed using cross‐currency swaps. We find that local currency credit spreads are positive and sizable. Compared with credit spreads on foreign‐currency‐denominated debt, local currency credit spreads have lower means, lower cross‐country correlations, and lower sensitivity to global risk factors. We discuss several major sources of credit spread differentials, including positively correlated credit and currency risk, selective default, capital controls, and various financial market frictions.

@@ -1,0 +1,3 @@
+Exchange Rates and Fundamentals
+
+We show analytically that in a rational expectations present value model, an asset price manifests near random walk behavior if fundamentals are I(1) and the factor for discounting future fundamentals is near one.We argue that this result helps explain the well known puzzle that fundamental variables such as relative money supplies, outputs, inflation and interest rates provide little help in predicting changes in floating exchange rates.As well, we show that the data do exhibit a related link suggested by standard models -that the exchange rate helps predict these fundamentals.The implication is that exchange rates and fundamentals are linked in a way that is broadly consistent with asset pricing models of the exchange rate.

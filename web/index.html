@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Intelligent Search Engine using Compressed Trie and Inverted Index with TF-IDF Ranking across the Multi-Domain English Corpus (50,000 documents).">
+    <title>Intelligent Search Engine using Compressed Trie and Inverted Index</title>
+
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- Top Navigation & Brand Header -->
+    <header class="header">
+        <div class="brand-wrapper">
+            <div class="brand-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+            </div>
+            <div>
+                <h1 class="brand-title">Intelligent Search Engine</h1>
+                <p class="brand-subtitle">Compressed Trie · Inverted Index · TF-IDF Ranking · Evaluation Metrics</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <div id="connectionStatus" class="status-badge">
+                <span class="status-dot"></span> Checking Backend...
+            </div>
+            <button id="workspaceNavBtn" class="btn-secondary" title="View Research Workspace & Saved Bookmarks">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                </svg>
+                Workspace
+                <span id="workspaceCountBadge" class="header-badge" style="display: none;">0</span>
+            </button>
+            <button id="analyticsNavBtn" class="btn-secondary" title="View Live Search Analytics Dashboard">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+                Live Analytics
+                <span id="analyticsCountBadge" class="header-badge" style="display: none;">0</span>
+            </button>
+            <button id="googleComparisonNavBtn" class="btn-secondary" title="Open Google Comparison Lab">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Google Comparison Lab
+            </button>
+            <button id="archModalBtn" class="btn-secondary" title="View Architecture & Data Structures">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                Architecture
+            </button>
+        </div>
+    </header>
+
+    <!-- Live Dataset Statistics Cards -->
+    <section class="stats-grid" aria-label="Backend Statistics">
+        <div class="stat-card">
+            <div class="stat-label">Dataset Documents</div>
+            <div id="statTotalDocs" class="stat-value">--</div>
+            <div class="stat-meta">Multi-Domain Corpus</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Unique Terms Indexed</div>
+            <div id="statTotalTerms" class="stat-value">--</div>
+            <div class="stat-meta">Inverted Index Dictionary</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Information Domains</div>
+            <div id="statTotalCategories" class="stat-value">11</div>
+            <div class="stat-meta">Science, Health, AI, Finance...</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Compressed Trie</div>
+            <div class="stat-value" style="font-size: 22px; color: #60a5fa;">Active (Radix)</div>
+            <div class="stat-meta">O(L) Prefix Autocomplete</div>
+        </div>
+    </section>
+
+    <!-- Search Hero & Controls -->
+    <main>
+        <section class="search-hero">
+            <h2 class="search-title">Intelligent Corpus Search</h2>
+            <p class="search-subtitle">Search with live prefix completion via Compressed Trie and relevance ranking via TF-IDF.</p>
+
+            <!-- Search Bar with Live Trie Dropdown -->
+            <form id="searchForm" class="search-box-container" role="search">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input id="queryInput"
+                           class="search-input"
+                           type="text"
+                           placeholder="Search articles... (e.g., cricket t20, technology software)"
+                           autocomplete="off"
+                           spellcheck="false"
+                           required>
+                    <button type="button" id="clearBtn" class="search-clear-btn" title="Clear search">✕</button>
+                    <button type="submit" id="searchBtn" class="btn-search">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        Search
+                    </button>
+                </div>
+
+                <!-- Trie Prefix Suggestions Dropdown -->
+                <div id="autocompleteDropdown" class="autocomplete-dropdown" aria-live="polite">
+                    <div class="autocomplete-header">
+                        <span>Compressed Trie Suggestions</span>
+                        <span class="trie-pill">Dataset Vocabulary</span>
+                    </div>
+                    <ul id="autocompleteList" class="autocomplete-list"></ul>
+                </div>
+            </form>
+
+            <!-- Ranking Comparison Lab (Algorithm Selector) -->
+            <div class="algo-row" aria-label="Ranking Algorithm Comparison Lab">
+                <span class="algo-label">Algorithm Lab:</span>
+                <button type="button" class="algo-pill active" data-algo="coverage" title="Coverage-Aware TF-IDF: Multiplies TF-IDF score by (matched/valid)^1.5 to eliminate partial-match noise">
+                    <span class="algo-dot active-dot"></span>
+                    <span class="algo-title">Coverage-Aware TF-IDF</span>
+                    <span class="algo-tag default-tag">Default</span>
+                </button>
+                <button type="button" class="algo-pill" data-algo="semantic" title="Semantic Search (LSA): Genuine meaning-based retrieval mapping queries and documents into a 128-dimensional latent semantic space. Discovers conceptually related documents even when exact keywords differ.">
+                    <span class="algo-dot dot-semantic"></span>
+                    <span class="algo-title">🧠 Semantic Search (LSA)</span>
+                    <span class="algo-tag semantic-tag">Concept Space</span>
+                </button>
+                <button type="button" class="algo-pill" data-algo="bm25" title="Okapi BM25: Probabilistic relevance ranking with term saturation (k1=1.2) and document length normalization (b=0.75)">
+                    <span class="algo-dot"></span>
+                    <span class="algo-title">Okapi BM25</span>
+                    <span class="algo-tag">Probabilistic</span>
+                </button>
+                <button type="button" class="algo-pill" data-algo="baseline" title="Baseline TF-IDF: Traditional un-normalized vector-space TF-IDF sum without coverage weighting">
+                    <span class="algo-dot"></span>
+                    <span class="algo-title">Baseline TF-IDF</span>
+                    <span class="algo-tag">Baseline</span>
+                </button>
+                <span class="algo-divider"></span>
+                <button type="button" class="algo-pill compare-pill" id="compareAllBtn" data-algo="compare" title="3-Way Comparison Lab: Run Coverage-Aware, Okapi BM25, and Baseline TF-IDF simultaneously on the same query">
+                    <span class="algo-dot compare-dot"></span>
+                    <span class="algo-title">⚡ 3-Way Comparison Lab</span>
+                    <span class="algo-tag compare-tag">Side-by-Side</span>
+                </button>
+            </div>
+
+            <!-- Category Filter Badges -->
+            <div class="filter-row">
+                <span class="filter-label">Category:</span>
+                <button type="button" class="category-pill active" data-category="all">
+                    All Categories <span class="pill-count">--</span>
+                </button>
+                <button type="button" class="category-pill" data-category="science">
+                    Science <span class="pill-count">--</span>
+                </button>
+                <button type="button" class="category-pill" data-category="health">
+                    Health <span class="pill-count">--</span>
+                </button>
+                <button type="button" class="category-pill" data-category="ai">
+                    AI & Computing <span class="pill-count">--</span>
+                </button>
+                <button type="button" class="category-pill" data-category="environment">
+                    Environment <span class="pill-count">--</span>
+                </button>
+                <button type="button" class="category-pill" data-category="finance">
+                    Finance <span class="pill-count">--</span>
+                </button>
+                <button type="button" class="category-pill" data-category="education">
+                    Education <span class="pill-count">--</span>
+                </button>
+                <button type="button" class="category-pill" data-category="business">
+                    Business <span class="pill-count">--</span>
+                </button>
+                <button type="button" class="category-pill" data-category="entertainment">
+                    Entertainment <span class="pill-count">--</span>
+                </button>
+                <button type="button" class="category-pill" data-category="politics">
+                    Politics <span class="pill-count">--</span>
+                </button>
+                <button type="button" class="category-pill" data-category="sport">
+                    Sport <span class="pill-count">--</span>
+                </button>
+                <button type="button" class="category-pill" data-category="tech">
+                    Technology <span class="pill-count">--</span>
+                </button>
+            </div>
+
+            <!-- Quick Query Suggestion Chips & Evaluation Toggle -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                <div class="query-chips">
+                    <span class="query-chips-label">Try queries:</span>
+                    <button type="button" class="chip-btn" data-query="quantum cosmology">quantum cosmology</button>
+                    <button type="button" class="chip-btn" data-query="heart failure clinical trial">heart failure clinical trial</button>
+                    <button type="button" class="chip-btn" data-query="neural network transformer">neural network transformer</button>
+                    <button type="button" class="chip-btn" data-query="climate change emissions">climate change emissions</button>
+                    <button type="button" class="chip-btn" data-query="monetary policy inflation">monetary policy inflation</button>
+                    <button type="button" class="chip-btn" data-query="pedagogy curriculum learning">pedagogy curriculum learning</button>
+                    <button type="button" class="chip-btn" data-query="technology software">technology software</button>
+                    <button type="button" class="chip-btn" data-query="cricket t20">cricket t20</button>
+                </div>
+
+                <button type="button" id="evalToggleBtn" class="btn-secondary" style="font-size: 12px; padding: 6px 12px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    Evaluation Metrics
+                </button>
+            </div>
+        </section>
+
+        <!-- Search Evaluation Panel -->
+        <section id="evalPanel" class="eval-panel" aria-label="Search Evaluation">
+            <div class="eval-header">
+                <div class="eval-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    Search Evaluation Metrics (SearchEvaluator.java)
+                </div>
+                <div class="eval-select-wrapper">
+                    <label for="evalCategorySelect" class="eval-select-label">Expected Target Category:</label>
+                    <select id="evalCategorySelect" class="eval-select">
+                        <option value="health" selected>Health & Medicine</option>
+                        <option value="science">Science & Research</option>
+                        <option value="ai">Technology & AI</option>
+                        <option value="environment">Environment & Climate</option>
+                        <option value="finance">Finance & Economics</option>
+                        <option value="education">Education</option>
+                        <option value="sport">Sport</option>
+                        <option value="business">Business</option>
+                        <option value="politics">Politics</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="tech">Technology (News)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="eval-metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-name">Precision</div>
+                    <div id="metricPrecision" class="metric-value">0.0%</div>
+                    <div class="metric-formula">|Retrieved ∩ Relevant| / |Retrieved|</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-name">Recall</div>
+                    <div id="metricRecall" class="metric-value">0.0%</div>
+                    <div class="metric-formula">|Retrieved ∩ Relevant| / |All Category Docs|</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-name">F1 Score</div>
+                    <div id="metricF1" class="metric-value">0.0000</div>
+                    <div class="metric-formula">2 · (Precision · Recall) / (P + R)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ranked Results Section (Single Algorithm) -->
+        <section id="resultsSection" style="display: none;">
+            <div id="resultsHeader" class="results-header">
+                <div id="resultsSummary" class="results-count">Results</div>
+                <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                    <button type="button" id="btnSaveCurrentQuery" class="btn-save-query" title="Save this search query to Research Workspace">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                        Save Query
+                    </button>
+                    <button type="button" id="btnSwitchToCompare" class="btn-compare-action" title="Compare this query across all 3 algorithms side-by-side">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="18" rx="1"></rect>
+                            <rect x="14" y="3" width="7" height="18" rx="1"></rect>
+                        </svg>
+                        Compare All 3 Algorithms
+                    </button>
+                    <div id="resultsLatency" class="results-latency">0 ms</div>
+                </div>
+            </div>
+
+            <div id="resultsContainer" class="results-list"></div>
+
+            <!-- Zero Results Empty State -->
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <h3 class="empty-title">No matching documents found</h3>
+                <p class="empty-desc">
+                    No articles matched "<strong id="emptyQueryText"></strong>" in the multi-domain corpus.
+                    Try searching for common terms or picking one of the suggested query chips above.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3-Way Ranking Comparison Lab Dashboard -->
+        <section id="comparisonSection" class="comparison-section" style="display: none;" aria-label="Ranking Algorithm Comparison Dashboard">
+            <div class="comparison-header">
+                <div class="comparison-title-wrap">
+                    <div class="comparison-badge">
+                        <span class="pulse-dot"></span>
+                        Ranking Algorithm Comparison Lab
+                    </div>
+                    <h3 id="comparisonQueryTitle" class="comparison-query-title">3-Way Algorithm Comparison</h3>
+                    <p class="comparison-subtitle">
+                        Side-by-side analysis of candidate ranking, scoring dynamics, and latency under the same query and filters.
+                    </p>
+                </div>
+                <div class="comparison-actions">
+                    <div class="compare-limit-wrap">
+                        <label for="compareLimitSelect" class="compare-limit-label">Show Top:</label>
+                        <select id="compareLimitSelect" class="compare-limit-select">
+                            <option value="5" selected>5 per algorithm</option>
+                            <option value="10">10 per algorithm</option>
+                            <option value="15">15 per algorithm</option>
+                        </select>
+                    </div>
+                    <button type="button" id="btnSaveCompareQuery" class="btn-save-query" title="Save this comparison query to Research Workspace">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                        Save Query
+                    </button>
+                    <button type="button" id="btnReturnToSingle" class="btn-secondary" style="font-size: 12px; padding: 6px 14px;">
+                        ← Single Search View
+                    </button>
+                </div>
+            </div>
+
+            <!-- Consensus & Cross-Model Overlap Bar -->
+            <div id="comparisonMetricsBar" class="comparison-metrics-bar"></div>
+
+            <!-- 3-Column Algorithm Comparison Grid -->
+            <div class="comparison-grid">
+                <!-- Column 1: Coverage-Aware TF-IDF -->
+                <div class="comparison-col col-coverage" id="colCoverage">
+                    <div class="col-header">
+                        <div class="col-title-row">
+                            <span class="col-dot dot-coverage"></span>
+                            <h4 class="col-title">Coverage-Aware TF-IDF</h4>
+                            <span class="col-pill pill-default">Default</span>
+                        </div>
+                        <div class="col-formula-desc">
+                            TF-IDF · (matched / valid)<sup>1.5</sup> coordination factor
+                        </div>
+                        <div class="col-meta-bar" id="metaCoverage">
+                            <span class="col-matches">-- matches</span>
+                            <span class="col-latency">-- ms</span>
+                        </div>
+                    </div>
+                    <div class="col-results-list" id="resultsCoverage"></div>
+                </div>
+
+                <!-- Column 2: Okapi BM25 -->
+                <div class="comparison-col col-bm25" id="colBm25">
+                    <div class="col-header">
+                        <div class="col-title-row">
+                            <span class="col-dot dot-bm25"></span>
+                            <h4 class="col-title">Okapi BM25</h4>
+                            <span class="col-pill pill-prob">Probabilistic</span>
+                        </div>
+                        <div class="col-formula-desc">
+                            Term saturation (k<sub>1</sub>=1.2) · Length normalization (b=0.75)
+                        </div>
+                        <div class="col-meta-bar" id="metaBm25">
+                            <span class="col-matches">-- matches</span>
+                            <span class="col-latency">-- ms</span>
+                        </div>
+                    </div>
+                    <div class="col-results-list" id="resultsBm25"></div>
+                </div>
+
+                <!-- Column 3: Baseline TF-IDF -->
+                <div class="comparison-col col-baseline" id="colBaseline">
+                    <div class="col-header">
+                        <div class="col-title-row">
+                            <span class="col-dot dot-baseline"></span>
+                            <h4 class="col-title">Baseline TF-IDF</h4>
+                            <span class="col-pill pill-base">Vector Space</span>
+                        </div>
+                        <div class="col-formula-desc">
+                            Unweighted vector-space TF-IDF sum (un-normalized)
+                        </div>
+                        <div class="col-meta-bar" id="metaBaseline">
+                            <span class="col-matches">-- matches</span>
+                            <span class="col-latency">-- ms</span>
+                        </div>
+                    </div>
+                    <div class="col-results-list" id="resultsBaseline"></div>
+                </div>
+            </div>
+
+            <!-- Objective Methodology & Analytical Caveats Note -->
+            <div class="comparison-disclaimer">
+                <div class="disclaimer-title">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    Methodological Note on Cross-Algorithm Comparisons
+                </div>
+                <p>
+                    <strong>Score Incommensurability:</strong> Absolute numerical scores cannot be directly compared across algorithms (Coverage-Aware TF-IDF produces normalized fractions &isin; [0, 1], BM25 produces unbounded asymptotic log-odds scores &ge; 0, and Baseline TF-IDF sums raw product terms).
+                    <strong>Latency Differences:</strong> Measured response times reflect candidate postings list filtering, scoring passes, and JVM runtime state under local execution rather than asymptotic superiority. Evaluate algorithms based on ranking coherence and query-term coordination rather than raw scores or execution milliseconds.
+                </p>
+            </div>
+        </section>
+
+        <!-- Feature 3: Research Workspace Section -->
+        <section id="researchWorkspace" class="workspace-section" aria-label="Research Workspace">
+            <!-- Workspace Header -->
+            <div class="workspace-header">
+                <div class="workspace-header-left">
+                    <div class="workspace-badge">
+                        <span class="workspace-dot"></span>
+                        Local Research Workspace
+                    </div>
+                    <h3 class="workspace-title">Research Workspace & Knowledge Hub</h3>
+                    <p class="workspace-subtitle">
+                        Organize bookmarked literature into thematic collections, annotate documents with personal notes, and preserve search queries locally.
+                    </p>
+                </div>
+                <div class="workspace-header-actions">
+                    <button type="button" id="btnOpenCreateCollection" class="btn-secondary" title="Create a new research collection">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        New Collection
+                    </button>
+                    <button type="button" id="btnClearWorkspace" class="btn-secondary btn-danger-subtle" title="Clear all bookmarks, collections, and saved queries">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        </svg>
+                        Reset Workspace
+                    </button>
+                </div>
+            </div>
+
+            <!-- Workspace Top Bar: Tabs & Local Persistence Badge -->
+            <div class="workspace-nav-bar">
+                <div class="workspace-tabs">
+                    <button type="button" class="ws-tab-btn active" id="wsTabBookmarks" data-tab="bookmarks">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        Bookmarked Documents (<span id="wsBookmarkCount">0</span>)
+                    </button>
+                    <button type="button" class="ws-tab-btn" id="wsTabSearches" data-tab="searches">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                        Saved Searches (<span id="wsSearchCount">0</span>)
+                    </button>
+                </div>
+
+                <div class="ws-storage-indicator" title="Persistent storage file: workspace.json in project root">
+                    <span class="storage-dot"></span> Local Storage: <code>workspace.json</code>
+                </div>
+            </div>
+
+            <!-- Inline Card for Creating / Renaming Collection -->
+            <div id="collectionFormCard" class="collection-form-card" style="display: none;">
+                <div class="col-form-title" id="colFormTitle">Create New Collection</div>
+                <div class="col-form-row">
+                    <input type="text" id="collectionNameInput" class="col-input" placeholder="e.g., Quantum Cosmology, Cardiovascular Review..." maxlength="60">
+                    <button type="button" id="btnSaveCollection" class="btn-primary" style="padding: 6px 14px; font-size: 12px;">Save</button>
+                    <button type="button" id="btnCancelCollection" class="btn-secondary" style="padding: 6px 14px; font-size: 12px;">Cancel</button>
+                </div>
+            </div>
+
+            <!-- TAB 1: Bookmarks Panel -->
+            <div id="wsBookmarksPanel" class="ws-panel-content">
+                <!-- Collections Filter Row -->
+                <div class="collections-filter-wrap">
+                    <span class="col-filter-label">Collection:</span>
+                    <div id="collectionsListPills" class="collections-pills-list">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Empty State for Bookmarks -->
+                <div id="wsBookmarksEmpty" class="workspace-empty-state" style="display: none;">
+                    <div class="ws-empty-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="ws-empty-title">No Bookmarked Documents in this Collection</h4>
+                    <p class="ws-empty-desc">
+                        Search documents above and click <strong>🔖 Bookmark</strong> on any result card to save it, attach personal research notes, and assign it to custom collections.
+                    </p>
+                </div>
+
+                <!-- Bookmarked Cards List -->
+                <div id="wsBookmarksContainer" class="workspace-cards-grid">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- TAB 2: Saved Searches Panel -->
+            <div id="wsSearchesPanel" class="ws-panel-content" style="display: none;">
+                <!-- Empty State for Saved Searches -->
+                <div id="wsSearchesEmpty" class="workspace-empty-state" style="display: none;">
+                    <div class="ws-empty-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </div>
+                    <h4 class="ws-empty-title">No Saved Search Queries Yet</h4>
+                    <p class="ws-empty-desc">
+                        Click <strong>💾 Save Query</strong> in the search results bar to preserve queries and rerun them at any time.
+                    </p>
+                </div>
+
+                <!-- Saved Searches List -->
+                <div id="wsSearchesContainer" class="saved-searches-list">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 2: Live Search Analytics & Latency Monitor Dashboard -->
+        <section id="analyticsDashboard" class="analytics-dashboard" aria-label="Live Search Analytics Dashboard">
+            <!-- Dashboard Header -->
+            <div class="analytics-header">
+                <div class="analytics-header-left">
+                    <div class="analytics-badge">
+                        <span class="analytics-pulse-dot"></span>
+                        System Telemetry
+                    </div>
+                    <h3 class="analytics-title">Live Search Analytics & Latency Monitor</h3>
+                    <p class="analytics-subtitle">
+                        Real-time query metrics, backend execution vs. browser round-trip latency, and multi-model query distribution.
+                    </p>
+                </div>
+                <div class="analytics-header-actions">
+                    <button type="button" id="refreshAnalyticsBtn" class="btn-secondary" title="Refresh Live Analytics">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="refreshIcon">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                        Refresh
+                    </button>
+                    <button type="button" id="clearAnalyticsBtn" class="btn-secondary btn-danger-subtle" title="Clear All Analytics History (Test Empty State)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        </svg>
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Empty State Component (Active when 0 searches recorded) -->
+            <div id="analyticsEmptyState" class="analytics-empty-state" style="display: none;">
+                <div class="analytics-empty-icon-wrap">
+                    <svg class="analytics-empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                </div>
+                <h4 class="analytics-empty-title">No Search Queries Recorded Yet</h4>
+                <p class="analytics-empty-desc">
+                    Execute searches using Coverage-Aware TF-IDF, Okapi BM25, Baseline TF-IDF, or the ⚡ 3-Way Comparison Lab to monitor real-time backend execution, client round-trip latency, and model distribution.
+                </p>
+                <div class="analytics-empty-action">
+                    <button type="button" class="btn-primary-sample" id="emptyStateSampleBtn">
+                        ⚡ Run Sample Search ("quantum cosmology")
+                    </button>
+                </div>
+            </div>
+
+            <!-- Analytics Content (Active when searches are recorded) -->
+            <div id="analyticsContent" class="analytics-content">
+                <!-- 4 KPI Summary Cards -->
+                <div class="analytics-kpi-grid">
+                    <div class="analytics-kpi-card">
+                        <div class="kpi-label">Total Searches Recorded</div>
+                        <div id="kpiTotalSearches" class="kpi-value">0</div>
+                        <div class="kpi-meta">Genuine user search actions</div>
+                    </div>
+                    <div class="analytics-kpi-card">
+                        <div class="kpi-label">Avg Backend Execution</div>
+                        <div id="kpiAvgExec" class="kpi-value">0.0 ms</div>
+                        <div class="kpi-meta">Java postings & ranking compute</div>
+                    </div>
+                    <div class="analytics-kpi-card">
+                        <div class="kpi-label">Avg Browser Round-Trip</div>
+                        <div id="kpiAvgRtt" class="kpi-value">0.0 ms</div>
+                        <div class="kpi-meta">Network + JSON parse + DOM render</div>
+                    </div>
+                    <div class="analytics-kpi-card">
+                        <div class="kpi-label">Leading Algorithm</div>
+                        <div id="kpiTopAlgo" class="kpi-value" style="font-size: 19px; color: #60a5fa;">--</div>
+                        <div id="kpiTopAlgoMeta" class="kpi-meta">-- searches</div>
+                    </div>
+                </div>
+
+                <!-- Mid Grid: Algorithm Distribution (Left) & Latency Chart (Right) -->
+                <div class="analytics-mid-grid">
+                    <!-- Column 1: Algorithm Distribution -->
+                    <div class="analytics-panel-card">
+                        <div class="panel-header">
+                            <div class="panel-title">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                                    <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                                </svg>
+                                Algorithm Usage Distribution
+                            </div>
+                            <span class="panel-subtitle">Usage counts & percentages</span>
+                        </div>
+
+                        <div class="algo-distribution-list">
+                            <!-- Coverage-Aware TF-IDF -->
+                            <div class="algo-dist-item">
+                                <div class="dist-item-top">
+                                    <span class="dist-name">
+                                        <span class="dist-dot dot-coverage"></span>
+                                        Coverage-Aware TF-IDF
+                                    </span>
+                                    <span id="distCoverageVal" class="dist-val">0 (0.0%)</span>
+                                </div>
+                                <div class="dist-bar-track">
+                                    <div id="distCoverageBar" class="dist-bar-fill bar-coverage" style="width: 0%;"></div>
+                                </div>
+                                <div id="distCoverageLatency" class="dist-subtext">Avg backend execution: 0.0 ms</div>
+                            </div>
+
+                            <!-- Semantic Search (LSA) -->
+                            <div class="algo-dist-item">
+                                <div class="dist-item-top">
+                                    <span class="dist-name">
+                                        <span class="dist-dot dot-semantic"></span>
+                                        Semantic Search (LSA)
+                                    </span>
+                                    <span id="distSemanticVal" class="dist-val">0 (0.0%)</span>
+                                </div>
+                                <div class="dist-bar-track">
+                                    <div id="distSemanticBar" class="dist-bar-fill bar-semantic" style="width: 0%;"></div>
+                                </div>
+                                <div id="distSemanticLatency" class="dist-subtext">Avg backend execution: 0.0 ms</div>
+                            </div>
+
+                            <!-- Okapi BM25 -->
+                            <div class="algo-dist-item">
+                                <div class="dist-item-top">
+                                    <span class="dist-name">
+                                        <span class="dist-dot dot-bm25"></span>
+                                        Okapi BM25
+                                    </span>
+                                    <span id="distBm25Val" class="dist-val">0 (0.0%)</span>
+                                </div>
+                                <div class="dist-bar-track">
+                                    <div id="distBm25Bar" class="dist-bar-fill bar-bm25" style="width: 0%;"></div>
+                                </div>
+                                <div id="distBm25Latency" class="dist-subtext">Avg backend execution: 0.0 ms</div>
+                            </div>
+
+                            <!-- Baseline TF-IDF -->
+                            <div class="algo-dist-item">
+                                <div class="dist-item-top">
+                                    <span class="dist-name">
+                                        <span class="dist-dot dot-baseline"></span>
+                                        Baseline TF-IDF
+                                    </span>
+                                    <span id="distBaselineVal" class="dist-val">0 (0.0%)</span>
+                                </div>
+                                <div class="dist-bar-track">
+                                    <div id="distBaselineBar" class="dist-bar-fill bar-baseline" style="width: 0%;"></div>
+                                </div>
+                                <div id="distBaselineLatency" class="dist-subtext">Avg backend execution: 0.0 ms</div>
+                            </div>
+
+                            <!-- 3-Way Comparison Lab -->
+                            <div class="algo-dist-item">
+                                <div class="dist-item-top">
+                                    <span class="dist-name">
+                                        <span class="dist-dot dot-compare"></span>
+                                        3-Way Comparison Lab
+                                    </span>
+                                    <span id="distCompareVal" class="dist-val">0 (0.0%)</span>
+                                </div>
+                                <div class="dist-bar-track">
+                                    <div id="distCompareBar" class="dist-bar-fill bar-compare" style="width: 0%;"></div>
+                                </div>
+                                <div id="distCompareLatency" class="dist-subtext">Avg backend execution: 0.0 ms (combined 3 models)</div>
+                            </div>
+                        </div>
+
+                        <div class="dist-note">
+                            <strong>Deduplicated Counting:</strong> 3-Way Comparison queries evaluate Coverage, BM25, and Baseline simultaneously as 1 single user search action to prevent artificial metrics inflation.
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Latency Chart -->
+                    <div class="analytics-panel-card">
+                        <div class="panel-header">
+                            <div class="panel-title">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                                Recent Latency Measurements
+                            </div>
+                            <div class="chart-legend">
+                                <span class="legend-item"><span class="legend-dot dot-exec"></span> Backend Exec</span>
+                                <span class="legend-item"><span class="legend-dot dot-rtt"></span> Browser RTT</span>
+                            </div>
+                        </div>
+
+                        <div class="chart-container" id="chartContainer">
+                            <svg id="latencyChartSvg" class="latency-chart-svg" viewBox="0 0 500 180" preserveAspectRatio="none">
+                                <!-- Rendered dynamically by app.js -->
+                            </svg>
+                            <div id="chartTooltip" class="chart-tooltip" style="display: none;"></div>
+                        </div>
+                        <div class="chart-footer-label">Sequential latency history of recent search executions</div>
+                    </div>
+                </div>
+
+                <!-- Recent Searches Log Table -->
+                <div class="analytics-panel-card" style="margin-top: 24px;">
+                    <div class="panel-header">
+                        <div class="panel-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            Recent Searches Log
+                        </div>
+                        <span class="panel-subtitle" id="tableRecordCount">Showing last 50 recorded searches</span>
+                    </div>
+
+                    <div class="table-scroll-wrapper">
+                        <table class="analytics-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 45px;">#</th>
+                                    <th>Search Query</th>
+                                    <th>Selected Algorithm</th>
+                                    <th>Category</th>
+                                    <th title="Actual backend execution time in Java">Backend Time</th>
+                                    <th title="Browser round-trip latency including network and DOM render">Browser RTT</th>
+                                    <th>Matches</th>
+                                    <th>Timestamp</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recentSearchesTableBody">
+                                <!-- Rendered dynamically by app.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature: Google Comparison Lab -->
+        <section id="googleComparisonLab" class="google-comparison-section" aria-label="Google Comparison Lab">
+            <div class="gcomp-header">
+                <div class="gcomp-header-left">
+                    <div class="gcomp-badge">
+                        <span class="gcomp-badge-dot"></span>
+                        Academic Demonstration · External Web vs. Local Corpus
+                    </div>
+                    <h3 class="gcomp-title">Google Comparison Lab</h3>
+                    <p class="gcomp-subtitle">
+                        Side-by-side comparative evaluation between our local search engine (50,000-document domain corpus) and external Google Search (public web index).
+                    </p>
+                </div>
+                <div class="gcomp-header-actions">
+                    <button type="button" id="refreshGcompBtn" class="btn-secondary" title="Refresh Evaluation History">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                        Refresh
+                    </button>
+                    <button type="button" id="clearGcompBtn" class="btn-secondary btn-danger-subtle" title="Clear Comparison History">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        </svg>
+                        Reset History
+                    </button>
+                </div>
+            </div>
+
+            <!-- Methodology & Limitations Callout Banner -->
+            <div class="gcomp-methodology-card">
+                <div class="methodology-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <span class="methodology-title">Comparative Methodology & Academic Constraints</span>
+                </div>
+                <div class="methodology-grid">
+                    <div class="methodology-item">
+                        <strong>Corpus Scope:</strong> Google searches billions of public web pages indexed worldwide, whereas our engine searches a curated, fixed academic corpus of 50,000 documents across 11 structured domains.
+                    </div>
+                    <div class="methodology-item">
+                        <strong>Dynamic Factors:</strong> Google rankings vary dynamically by geography, device, language localization, real-time index refresh, and search history.
+                    </div>
+                    <div class="methodology-item">
+                        <strong>Latency Nuance:</strong> Browser response time (network round-trip, TLS, CDN, DOM render) is fundamentally distinct from local Java backend algorithmic processing latency.
+                    </div>
+                    <div class="methodology-item">
+                        <strong>Academic Fairness:</strong> Comparisons must not be claimed as statistically fair benchmarks unless identical corpus ground truth, standardized relevance criteria, and controlled query sets are used.
+                    </div>
+                    <div class="methodology-item methodology-terms-notice">
+                        <strong>Terms of Service & Research Ethics:</strong> Google search results are rendered directly by Google in the external browser tab. This application adheres to academic integrity and Google's Terms of Service: <em>we do not scrape, automate, parse, or copy Google search results</em>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shared Search Controls Bar -->
+            <div class="gcomp-search-bar-wrap">
+                <div class="gcomp-search-bar">
+                    <div class="gcomp-input-group">
+                        <label for="gcompQueryInput" class="gcomp-label">Shared Search Query</label>
+                        <div class="gcomp-input-wrap">
+                            <svg class="gcomp-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <input type="text" id="gcompQueryInput" class="gcomp-input" placeholder="Enter query to compare (e.g., cardiac surgery, quantum computing, monetary inflation)...">
+                        </div>
+                    </div>
+
+                    <div class="gcomp-select-group">
+                        <label for="gcompAlgoSelect" class="gcomp-label">Local Ranking Algorithm</label>
+                        <select id="gcompAlgoSelect" class="gcomp-select">
+                            <option value="coverage">Coverage-Aware TF-IDF</option>
+                            <option value="bm25">Okapi BM25</option>
+                            <option value="baseline">Baseline TF-IDF</option>
+                            <option value="semantic">🧠 Semantic Search (LSA 128-D)</option>
+                        </select>
+                    </div>
+
+                    <div class="gcomp-select-group">
+                        <label for="gcompCategorySelect" class="gcomp-label">Corpus Category</label>
+                        <select id="gcompCategorySelect" class="gcomp-select">
+                            <option value="all">All Domains (50,000 docs)</option>
+                            <option value="science">Science</option>
+                            <option value="health">Health & Medicine</option>
+                            <option value="technology">Technology</option>
+                            <option value="ai">Artificial Intelligence</option>
+                            <option value="finance">Finance & Economics</option>
+                            <option value="politics">Politics & Society</option>
+                            <option value="education">Education</option>
+                            <option value="environment">Environment</option>
+                            <option value="law">Law & Policy</option>
+                            <option value="history">History</option>
+                            <option value="philosophy">Philosophy</option>
+                        </select>
+                    </div>
+
+                    <div class="gcomp-btn-wrap">
+                        <button type="button" id="btnSearchBoth" class="btn-search-both">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            Search Both
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Side-by-Side Results Display Grid -->
+            <div id="gcompResultsArea" class="gcomp-results-grid" style="display: none;">
+                <!-- Left Column: Local Engine Results (Top 5) -->
+                <div class="gcomp-col local-col">
+                    <div class="gcomp-col-header">
+                        <div class="gcomp-col-title-wrap">
+                            <span class="gcomp-engine-badge local-badge">Local Search Engine</span>
+                            <h4 class="gcomp-col-title">Local Top-5 Retrieved Documents</h4>
+                        </div>
+                        <div id="localMetaBadge" class="gcomp-col-meta">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                    <div id="localResultsList" class="gcomp-cards-list">
+                        <!-- Populated dynamically with top 5 cards -->
+                    </div>
+                </div>
+
+                <!-- Right Column: External Google Search Page -->
+                <div class="gcomp-col google-col">
+                    <div class="gcomp-col-header">
+                        <div class="gcomp-col-title-wrap">
+                            <span class="gcomp-engine-badge google-badge">External Web Search</span>
+                            <h4 class="gcomp-col-title">Google Search (New Tab)</h4>
+                        </div>
+                        <span id="googleMetaBadge" class="gcomp-col-meta">
+                            External Web Index
+                        </span>
+                    </div>
+
+                    <div class="google-panel-body">
+                        <div class="google-external-notice">
+                            <div class="google-notice-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </div>
+                            <div class="google-notice-text">
+                                <h5>External Google Search Opened</h5>
+                                <p id="googleTabStatus">
+                                    Google search was opened in a new browser tab for live inspection.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="google-launch-box">
+                            <button type="button" id="btnReopenGoogle" class="btn-reopen-google">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Re-open Google Search Tab
+                            </button>
+                            <span id="googleTargetUrl" class="google-url-label"></span>
+                        </div>
+
+                        <div class="google-disclaimer-card">
+                            <h6>Academic Demonstration & Ethics Notice</h6>
+                            <p>
+                                <strong>Google results are evaluated manually and are not collected automatically.</strong>
+                            </p>
+                            <p style="margin-top: 6px;">
+                                This engine does not scrape, mirror, or automate Google results. To evaluate Google's top 5 results, inspect the opened tab and record the number of relevant results in the manual evaluation form below.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manual Evaluation Form -->
+            <div class="gcomp-eval-card">
+                <div class="gcomp-eval-header">
+                    <div>
+                        <h4 class="gcomp-eval-title">Manual Quality Evaluation Form</h4>
+                        <p class="gcomp-eval-subtitle">
+                            Record structured precision observations for either the Local Engine or Google Search. Results are saved locally for academic reporting.
+                        </p>
+                    </div>
+                    <div class="eval-calc-badge">
+                        <span class="calc-label">Calculated Precision@5:</span>
+                        <span id="calcPrecisionBadge" class="calc-value">--</span>
+                    </div>
+                </div>
+
+                <form id="gcompEvalForm" class="gcomp-form-grid">
+                    <div class="form-group form-query">
+                        <label for="evalQueryInput">Evaluation Query</label>
+                        <input type="text" id="evalQueryInput" required placeholder="Query being evaluated...">
+                    </div>
+
+                    <div class="form-group form-engine">
+                        <label for="evalEngineSelect">Search Engine</label>
+                        <select id="evalEngineSelect">
+                            <option value="local">Local Search Engine</option>
+                            <option value="google">Google Search (External)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group form-relevant">
+                        <label for="evalRelevantCount">Relevant in Top 5 (0 to 5)</label>
+                        <select id="evalRelevantCount">
+                            <option value="5">5 of 5 (100% Precision)</option>
+                            <option value="4" selected>4 of 5 (80% Precision)</option>
+                            <option value="3">3 of 5 (60% Precision)</option>
+                            <option value="2">2 of 5 (40% Precision)</option>
+                            <option value="1">1 of 5 (20% Precision)</option>
+                            <option value="0">0 of 5 (0% Precision)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group form-latency">
+                        <label for="evalLatencyInput">Browser Response Time (ms, optional)</label>
+                        <input type="number" id="evalLatencyInput" min="0" placeholder="e.g. 145 ms">
+                    </div>
+
+                    <div class="form-group form-notes full-width">
+                        <label for="evalNotesInput">Evaluation Notes & Qualitative Analysis</label>
+                        <textarea id="evalNotesInput" rows="2" placeholder="e.g., Local engine achieved high domain-specific depth in health; Google retrieved broader commercial and news articles..."></textarea>
+                    </div>
+
+                    <div class="form-actions full-width">
+                        <button type="submit" id="btnSaveObservation" class="btn-primary-sample">
+                            💾 Save Comparison Observation
+                        </button>
+                        <span id="saveObservationMsg" class="save-msg"></span>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Comparison History & Summary Analytics Table -->
+            <div class="gcomp-history-card">
+                <div class="gcomp-history-header">
+                    <div class="gcomp-history-title-wrap">
+                        <h4 class="gcomp-history-title">Comparison History & Precision Analytics</h4>
+                        <span class="gcomp-history-subtitle">Persisted observations comparing Local retrieval against Google Search</span>
+                    </div>
+                    <div class="gcomp-kpi-summary">
+                        <div class="gcomp-kpi-pill">
+                            <span class="kpi-pill-label">Total Observations:</span>
+                            <span id="histTotalObs" class="kpi-pill-val">0</span>
+                        </div>
+                        <div class="gcomp-kpi-pill">
+                            <span class="kpi-pill-label">Local Avg P@5:</span>
+                            <span id="histLocalP5" class="kpi-pill-val">--</span>
+                        </div>
+                        <div class="gcomp-kpi-pill">
+                            <span class="kpi-pill-label">Google Avg P@5:</span>
+                            <span id="histGoogleP5" class="kpi-pill-val">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analytics-table-wrap">
+                    <table class="analytics-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Query</th>
+                                <th>Search Engine</th>
+                                <th>Relevant / 5</th>
+                                <th>Precision@5</th>
+                                <th>Response Time</th>
+                                <th>Notes</th>
+                                <th style="text-align: right;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="gcompHistoryTableBody">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="gcompHistoryEmpty" class="workspace-empty-state" style="display: none; padding: 24px;">
+                    <p style="color: var(--text-muted); font-size: 13px;">No comparison observations recorded yet. Use the form above to record evaluation observations.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            <strong>College Final Project Demonstration</strong> · Intelligent Search Engine using Compressed Trie and Inverted Index
+        </p>
+        <p style="margin-top: 6px; font-size: 12px;">
+            Dataset: Multi-Domain Corpus (50,000 Documents across 11 Topical Domains) · Real-time TF-IDF Ranking · Java SE Backend
+        </p>
+    </footer>
+
+</div>
+
+<!-- Full Document Reader Modal -->
+<div id="docModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="docModalTitle">
+    <div class="modal-card">
+        <div class="modal-header">
+            <div>
+                <h3 id="docModalTitle" class="modal-title">Document Content</h3>
+                <div id="docModalMeta" style="margin-top: 4px;"></div>
+            </div>
+            <button id="docModalClose" class="modal-close-btn" title="Close">✕</button>
+        </div>
+        <div class="modal-body">
+            <div id="docModalBody" class="article-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Architecture & Data Structures Modal -->
+<div id="archModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="archModalTitle">
+    <div class="modal-card">
+        <div class="modal-header">
+            <div>
+                <h3 id="archModalTitle" class="modal-title">System Architecture & Core Data Structures</h3>
+                <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+                    Technical breakdown for project evaluation and final review
+                </p>
+            </div>
+            <button id="archModalClose" class="modal-close-btn" title="Close">✕</button>
+        </div>
+        <div class="modal-body">
+            <div class="arch-grid">
+                <div class="arch-box">
+                    <h4>1. Compressed Trie (Radix Tree)</h4>
+                    <p>
+                        Compresses nodes with single descendants into multi-character edge labels. Provides memory-efficient storage of 64,380 vocabulary words and guarantees O(L) time complexity for prefix lookup and real-time autocomplete suggestions.
+                    </p>
+                </div>
+                <div class="arch-box">
+                    <h4>2. Inverted Index</h4>
+                    <p>
+                        A HashMap mapping every preprocessed dictionary term to a Set of matching document IDs. Fast constant-time candidate filtering prior to vector-space ranking.
+                    </p>
+                </div>
+                <div class="arch-box">
+                    <h4>3. Multi-Algorithm Relevance Ranking</h4>
+                    <p>
+                        Engineers deterministic result ranking with three selectable models: Coverage-Aware TF-IDF (penalizing partial-match noise with a 1.5 term-coordination exponent), Okapi BM25 (probabilistic relevance with term saturation k1=1.2 and document length normalization b=0.75), and Baseline TF-IDF.
+                    </p>
+                </div>
+                <div class="arch-box">
+                    <h4>4. Evaluation Engine</h4>
+                    <p>
+                        Evaluates query retrieval quality against labeled ground-truth categories using Information Retrieval metrics: Precision, Recall, and the harmonic mean F1-Score.
+                    </p>
+                </div>
+                <div class="arch-box">
+                    <h4>5. Latent Semantic Analysis (LSA) Concept Space</h4>
+                    <p>
+                        128-dimensional truncated SVD factorization of the sublinear TF-IDF term-document matrix. Projects documents and queries into a latent concept subspace where synonyms and related terms co-activate. Enables genuine meaning-based retrieval for queries with related meanings but different wording, complete with topic explainability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script -->
+<script src="app.js"></script>
+</body>
+</html>

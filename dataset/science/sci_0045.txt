@@ -1,0 +1,3 @@
+Complex paths around the sign problem
+
+A promising path to solving QCD is on a computer by discretizing spacetime, rewriting the QCD Lagrangian to fit in that discretization, and then taking the appropriate continuum and infinite volume limits. A problem with this method is that the calculation of certain quantities of interest is numerically intractable because of a ``sign problem.'' A sign problem appears whenever large cancellations make it impractical to obtain reliable numerical results. This review discusses a potential solution: deformation of the manifold on which the problem is defined in order to reduce these instabilities.

@@ -1,0 +1,3 @@
+The Higgs Sector of the Minimal SUSY B-L Model
+
+I review the Higgs sector of the U(1)B-L extension of the minimal supersymmetric standard model (MSSM). I will show that the gauge kinetic mixing plays a crucial role in the Higgs phenomenology. Two light bosons are present, a MSSM-like one and a B-L -like one, which mix at one loop solely due to the gauge mixing. After briefly looking at constraints from flavour observables, new decay channels involving right-handed (s)neutrinos are presented. Finally, how model features pertaining to the gauge extension affect the model phenomenology, concerning the existence ofR-Parity-conserving minima at loop level and the Higgs-to-diphoton coupling, will be reviewed.

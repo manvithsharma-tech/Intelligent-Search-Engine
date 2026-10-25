@@ -1,0 +1,3 @@
+Firm-Level Exposure to Epidemic Diseases: COVID-19, SARS, and H1N1
+
+We construct text-based measures of the primary concerns listed firms associated with the spread of COVID-19 and other epidemic diseases.We identify which firms perceive to lose or gain from a given epidemic and textually decompose the epidemic's effect on the firm's demand and supply.We find that the effects of COVID-19 manifest as a simultaneous shock to demand and supply, with both shocks affecting firms' market valuations in equal measure on average.By contrast, demand-related impacts appear more important in accounting for the observed collapse in firmlevel investment during the COVID-19 crisis.

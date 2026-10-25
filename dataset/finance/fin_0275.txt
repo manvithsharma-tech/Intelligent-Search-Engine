@@ -1,0 +1,3 @@
+Financial development and economic growth in Ghana: Does the measure of financial development matter?
+
+The aim of this paper is to investigate the long-run growth effects of financial development in Ghana. We find that the growth effect of financial development is sensitive to the choice of proxy. Both the credit to the private sector as ratios to GDP and total domestic credit are conducive for growth, while broad money stock to GDP ratio is not growth-inducing. The indexes created from principal component analysis confirmed the sensitivity of the effect to the choice of proxy. The findings here suggest that whether financial development is good or bad for growth depends on the indicator used to proxy for financial development.

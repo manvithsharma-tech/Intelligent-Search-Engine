@@ -1,0 +1,3 @@
+The Transmission of Monetary Policy Shocks
+
+Commonly used instruments for the identification of monetary policy disturbances are likely to combine the true policy shock with information about the state of the economy due to the information disclosed through the policy action. We show that this signaling effect of monetary policy can give rise to the empirical puzzles reported in the literature, and propose a new high-frequency instrument for monetary policy shocks that accounts for informational rigidities. We find that a monetary tightening is unequivocally contractionary, with deterioration of domestic demand, labor and credit market conditions as well as of asset prices and agents' expectations. (JEL D82, D84, E32, E43, E52, E58, G12)

@@ -1,0 +1,3 @@
+Loan Supply Shocks and the Business Cycle
+
+This paper provides empirical evidence on the role played by loan supply shocks over the business cycle in the euro area, the UK and the USA from 1980 to 2011 by estimating time-varying parameter vector autoregression models with stochastic volatility and identifying these shocks with sign restrictions consistent with the recent macroeconomic literature. The evidence suggests that in all three economic areas loan supply shocks appear to have a significant effect, with clear signs of an increasing impact over the past few years. Moreover, the role of loan supply shocks is estimated to be particularly important during recessions. Copyright © 2016 John Wiley & Sons, Ltd.

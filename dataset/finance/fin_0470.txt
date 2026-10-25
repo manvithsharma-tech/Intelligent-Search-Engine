@@ -1,0 +1,3 @@
+Empirical Analysis of Corporate Credit Lines
+
+Since bank credit lines are a major source of corporate funding, we examine the determinants of their usage with a comprehensive database of Spanish corporate credit lines. A line's default status is a key factor driving its usage, which increases as firm financial conditions worsen. Firms with prior defaults access their credit lines less, suggesting that bank monitoring influences firms' usage decisions. Line usage has an aging effect that causes it to decrease by roughly 10% per year of its life. Lender characteristics, such as the length of a firm's banking relationships, as well as macroeconomic conditions, affect usage decisions.

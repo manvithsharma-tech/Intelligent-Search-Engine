@@ -1,0 +1,3 @@
+Optimal Sticky Prices under Rational Inattention
+
+This paper presents a model in which price setting firms decide what to pay attention to, subject to a constraint on information flow. When idiosyncratic conditions are more variable or more important than aggregate conditions, firms pay more attention to idiosyncratic conditions than to aggregate conditions. When we calibrate the model to match the large average absolute size of price changes observed in micro data, prices react fast and by large amounts to idiosyncratic shocks, but only slowly and by small amounts to nominal shocks. Nominal shocks have strong and persistent real effects. (JEL D21, D83, E31, E52)

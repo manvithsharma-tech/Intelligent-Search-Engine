@@ -1,0 +1,3 @@
+Reference Electrodes in Metal Corrosion
+
+With especial regard to hydrogen electrode, the theoretical fundamentals of electrode potential, the most important reference electrodes and the electrode potential measurement have been discussed. In the case of the hydrogen electrode, it have been emphasised that there is no equilibrium between the hydrogen molecule (H2) and the hydrogen (H+), hydronium (H3O+) ion in the absence of a suitable catalyst. Taking into account the practical aspects as well, the theorectical basis of working of hydrogen, copper-copper sulphate, mercury-mercurous halide, silver-silver halide, metal-metal oxide, metal-metal sulphate and "Thalamid" electrodes, has been discussed.

@@ -1,0 +1,3 @@
+Private Equity Performance and Liquidity Risk
+
+ABSTRACT Private equity has traditionally been thought to provide diversification benefits. However, these benefits may be lower than anticipated as we find that private equity suffers from significant exposure to the same liquidity risk factor as public equity and other alternative asset classes. The unconditional liquidity risk premium is about 3% annually and, in a four‐factor model, the inclusion of this liquidity risk premium reduces alpha to zero. In addition, we provide evidence that the link between private equity returns and overall market liquidity occurs via a funding liquidity channel.

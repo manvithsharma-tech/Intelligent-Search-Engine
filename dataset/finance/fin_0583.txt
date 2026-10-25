@@ -1,0 +1,3 @@
+Monetary policy and bank lending in developing countries: Loan applications, rates, and real effects
+
+Recent studies of monetary policy in developing countries document a weak bank lending channel based on aggregate data. In this paper, we bring new evidence using Uganda's supervisory credit register, with microdata on loan applications, volumes and rates, coupled with unanticipated variation in monetary policy. We show that a monetary contraction reduces bank credit supply -- increasing loan application rejections and tightening loan volume and rates -- especially for banks with more leverage and sovereign debt exposure. There are associated spillovers on inflation and economic activity -- including construction permits and trade -- and even social unrest.

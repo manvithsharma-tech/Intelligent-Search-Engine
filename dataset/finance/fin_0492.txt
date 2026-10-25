@@ -1,0 +1,3 @@
+Outside and Inside Liquidity
+
+We propose an origination-and-contingent-distribution model of banking, in which liquidity demand by short-term investors (banks) can be met with cash reserves (inside liquidity) or sales of assets (outside liquidity) to long-term investors (hedge funds and pension funds). Outside liquidity is a more efficient source, but asymmetric information about asset quality can introduce a friction in the form of excessively early asset trading in anticipation of a liquidity shock, excessively high cash reserves, and too little origination of assets by banks. The model captures key elements of the financial crisis and yields novel policy prescriptions.

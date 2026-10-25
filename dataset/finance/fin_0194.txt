@@ -1,0 +1,3 @@
+Climate Change and Long-Run Discount Rates: Evidence from Real Estate
+
+Abstract We show that housing markets provide information about the appropriate discount rates for valuing investments in climate change abatement. Real estate is exposed to both consumption and climate risk and its term structure of discount rates is downward sloping, reaching 2.6% for payoffs beyond 100 years. We use a tractable asset pricing model that incorporates features of climate change to show that the term structure of discount rates for climate-hedging investments is thus upward sloping but bounded above by the risk-free rate. At horizons at which risk-free rates are unavailable, the estimated housing discount rates provide an upper bound.

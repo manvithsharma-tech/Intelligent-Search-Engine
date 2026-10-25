@@ -1,0 +1,3 @@
+Noether Gauge Symmetry of Dirac Field in (2 + 1)-Dimensional Gravity
+
+We consider a gravitational theory including a Dirac field that is nonminimally coupled to gravity in 2 + 1 dimensions. Noether gauge symmetry approach can be used to fix the form of coupling function F ( Ψ ) and the potential V ( Ψ ) of the Dirac field and to obtain a constant of motion for the dynamical equations. In the context of (2 + 1)-dimensional gravity, we investigate cosmological solutions of the field equations using these forms obtained by the existence of Noether gauge symmetry. In this picture, it is shown that, for the nonminimal coupling case, the cosmological solutions indicate both an early-time inflation and late-time acceleration for the universe.

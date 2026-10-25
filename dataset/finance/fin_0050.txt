@@ -1,0 +1,3 @@
+The Unreliability of Output-Gap Estimates in Real Time
+
+We examine the reliability of alternative output detrending methods, with special attention to the accuracy of real-time estimates of the output gap. We show that ex post revisions of the estimated gap are of the same order of magnitude as the estimated gap itself and that these revisions are highly persistent. Although important, the revision of published data is not the primary source of revisions in measured output gaps; the bulk of the problem is due to the pervasive unreliability of end-of-sample estimates of the trend in output. Multivariate methods that incorporate information from inflation to estimate the output gap are not more reliable than their univariate counterparts.

@@ -1,0 +1,3 @@
+The TIPS Yield Curve and Inflation Compensation
+
+For over ten years, the Treasury has issued index-linked debt. This paper describes the methodology for fitting a smoothed yield curve to these securities that is used at the Federal Reserve Board every day, and makes the estimates public. Comparison with the corresponding nominal yield curve allows measures of inflation compensation to be computed. We discuss the interpretation of inflation compensation, and provide evidence that it is not a pure measure of inflation expectations being distorted by inflation risk premium and liquidity premium components. We attempt to estimate the TIPS liquidity premium and to extract underlying inflation expectations. (JEL E31, E43, H63)

@@ -1,0 +1,3 @@
+Mind the Gap: Disentangling Credit and Liquidity in Risk Spreads
+
+Abstract Euro-area sovereign bond and interbank interest rate spreads spiked in the 2007 - 2009 Global Financial Crisis and the subsequent European Debt Crisis, substantially elevating financing costs. I use a model-free measure of market liquidity to precisely identify the relative contribution of credit versus liquidity to spreads in these episodes. In the Financial Crisis, liquidity is paramount, accounting for 36% of trough-to-peak widening, after controlling for credit. However, default risk becomes relatively more important to sovereign spreads in the Debt Crisis. Aggregate bond liquidity explains a substantial portion of interbank spreads throughout the sample.

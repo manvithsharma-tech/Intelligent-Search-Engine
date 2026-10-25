@@ -1,0 +1,3 @@
+Aspects of Quantum Black Holes
+
+Abstract Black holes play a key role for any quantum theory of gravity. The main reasons are black hole radiation and evaporation as well as black hole entropy. I review these issues and address the problem of information loss. I then discuss the status of black holes in full quantum gravity. Particular attention is focused on quantum geometrodynamics, the direct quantization of general relativity. This allows scenarios in which the black-hole singularity is avoided, in particular the collapse of a wave packet towards a black-hole like state and its re-expansion as a white hole.

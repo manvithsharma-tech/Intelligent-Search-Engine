@@ -1,0 +1,3 @@
+The Effects of the 1930s HOLC "Redlining" Maps
+
+This study uses a boundary design and propensity score methods to study the effects of the 1930s-era Home Owners Loan Corporation (HOLC) "redlining" maps on the long-run trajectories of urban neighborhoods. The maps led to reduced home ownership rates, house values, and rents and increased racial segregation in later decades. A comparison on either side of a city-level population cutoff that determined whether maps were drawn finds broadly similar conclusions. These results suggest the HOLC maps had meaningful and lasting effects on the development of urban neighborhoods through reduced credit access and subsequent disinvestment. (JEL G21, J15, N32, N42, N92, R23, R31)

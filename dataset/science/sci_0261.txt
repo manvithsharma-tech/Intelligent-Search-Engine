@@ -1,0 +1,3 @@
+On El Naschie's Fractal-Cantorian Space-Time and Dark Energy -- A Tutorial Review
+
+This tutorial review is dedicated to the work of the outstanding Egyptian theoretical physicist and engineering scientist Prof. Mohamed El Naschie. Every physics student knows the well-known Einstein's mass-energy equation, E=mc2, but unfortunately for physics, few know El Naschie's modification, E(O)=mc2/22, and El Naschie's dark energy equation E(D)=mc2(21/22) although this new insight has truly far reaching implications. This paper gives a short tutorial review of El Naschie's fractal-Cantorian space-time as well as dark energy. Emphasis is put on the fundamental concept of Cantor set, fractal dimensions, zero set, empty set, and Casimir effect.

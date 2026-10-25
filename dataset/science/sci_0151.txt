@@ -1,0 +1,3 @@
+Gravastar Model in Krori - Barua Metric Under f(Q)$f(\mathcal {Q})$ Gravity
+
+Abstract In this paper, the characteristics of a gravastar in gravity, which is upheld by Krori - Barua (KB) metric are explored. The authors have used KB metric for the interior and shell regions of the gravastar. The field equations are deduced by using KB metric. In the outside regions of the gravastar, two regular black hole metrics are taken. Additionally, the Israel junction condition to calculate the potential difference across the thin shell concerning different types of regular black holes, such as Bardeen and Hayward is applied. The physical properties like proper length, entropy, energy, equation of state, and stability are also discussed.

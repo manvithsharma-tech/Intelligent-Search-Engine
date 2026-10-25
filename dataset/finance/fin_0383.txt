@@ -1,0 +1,3 @@
+International Shock Transmission after the Lehman Brothers Collapse: Evidence from Syndicated Lending
+
+After Lehman Brothers filed for bankruptcy in September 2008, cross-border bank lending contracted sharply. To explain the severity and variation in this contraction, we analyze detailed data on cross-border syndicated lending by 75 banks to 59 countries. We find that banks which had to write down sub-prime assets, refinance large amounts of long-term debt, and which experienced sharp declines in their market-to-book ratio, transmitted these shocks across borders by curtailing their lending abroad. While shocked banks differentiated between countries in much the same way as less constrained banks, they restricted their lending more to small borrowers.

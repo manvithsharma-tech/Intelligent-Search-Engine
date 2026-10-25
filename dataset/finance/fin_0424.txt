@@ -1,0 +1,3 @@
+Is the Corporate Loan Market Globally Integrated? A Pricing Puzzle
+
+ABSTRACT We offer evidence that interest rate spreads on syndicated loans to corporate borrowers are economically significantly smaller in Europe than in the United States, other things equal. Differences in borrower, loan, and lender characteristics do not appear to explain this phenomenon. Borrowers overwhelmingly issue in their natural home market and bank portfolios display home bias. This may explain why pricing discrepancies are not competed away, though their causes remain a puzzle. Thus, important determinants of loan origination market outcomes remain to be identified, home bias appears to be material for pricing, and corporate financing costs differ across Europe and the United States.

@@ -1,0 +1,3 @@
+Consumption Risk and the Cross Section of Expected Returns
+
+This paper evaluates the central insight of the consumption capital asset pricing model that an asset's expected return is determined by its equilibrium risk to consumption. Rather than measure risk by the contemporaneous covariance of an asset's return and consumption growth, we measure risk by the covariance of an asset's return and consumption growth cumulated over many quarters following the return. While contemporaneous consumption risk explains little of the variation in average returns across the 25 Fama‐French portfolios, our measure of ultimate consumption risk at a horizon of three years explains a large fraction of this variation.

@@ -1,0 +1,3 @@
+Is there a zero lower bound? The effects of negative policy rates on banks and firms
+
+Exploiting confidential data from the euro area, we show that sound banks pass negative rates on to their corporate depositors and that pass-through is not impaired when policy rates move into negative territory. We do not observe a contraction in deposits, reflecting a general increase in corporate liquidity during the sample period. When their banks charge negative rates on deposits, firms with ex ante high liquidity invest more than comparable firms that are not charged negative rates and increase their liquid holdings less. These results challenge the common view that conventional monetary policy becomes ineffective at the zero lower bound.

@@ -1,0 +1,3 @@
+The Concept of Law and Models in Chemistry
+
+After a brief introduction to the basic concepts including some questions of language, the first part of this paper provides a brief survey of the historical development of laws and models in Chemistry, in particular atomic and molecular models. In the second part this paper deals with the fundamental role of the observation of symmetry violations in physics and chemistry in understanding the most 'fundamental laws' and current efforts towards such studies by means of high resolution spectroscopy of molecules. We conclude with a brief discussion of the implications for current unsolved problems in astrophysics and biology.

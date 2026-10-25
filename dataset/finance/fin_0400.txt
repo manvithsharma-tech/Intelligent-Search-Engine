@@ -1,0 +1,3 @@
+The Anatomy of the CDS Market
+
+Using novel position and trading data for single-name corporate credit default swaps (CDSs), we provide evidence that CDS markets emerge as "alternative trading venues" that serve a standardization and liquidity role. CDS positions and trading volume are larger for firms with bonds that are fragmented into many separate issues and have heterogeneous contractual terms. Whereas hedging motives are associated with trading volume in the bond and CDS markets, speculative trading concentrates in the CDS. Cross-market arbitrage links the CDS and bond market via the basis trade, compressing the negative CDS-bond basis and reducing price impact in the bond market.

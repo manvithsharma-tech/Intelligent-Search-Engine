@@ -1,0 +1,3 @@
+New Evidence on the Lending Channel
+
+Do banks play a special role in the transmission mechanism of monetary policy? I exploit the presence of internal capital markets in bank holding companies to isolate plausibly exogenous variation in the financial constraints faced by banks. I demonstrate that affiliated bank loan growth is less sensitive to changes in the federal funds rate and that affiliated banks are better able to smooth insured deposit outflows by issuing uninsured debt. Financial constraints matter for equilibrium lending as state loan growth also becomes less sensitive to changes in the federal funds rate as loan market share of affiliated banks increases, but do not seem to matter for equilibrium real variables, as state output growth is largely unaffected.

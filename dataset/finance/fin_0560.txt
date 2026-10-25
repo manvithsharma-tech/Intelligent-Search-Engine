@@ -1,0 +1,3 @@
+Double bank runs and liquidity risk management
+
+By providing liquidity to depositors and credit-line borrowers, banks can be exposed to double-runs on assets and liabilities. For identification, we exploit the 2007 freeze of the European interbank market and the Italian Credit Register. After the shock, there are sizeable, aggregate double-runs. In the cross-section, credit-line drawdowns are not larger for banks more exposed to the interbank market; however, they are larger when we condition on the same firms with multiple credit lines. We show that, ex-ante, more exposed banks actively manage their liquidity risk by granting fewer credit lines to firms that run more during crises.

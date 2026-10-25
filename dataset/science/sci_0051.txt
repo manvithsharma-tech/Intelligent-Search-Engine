@@ -1,0 +1,3 @@
+LUNA: a laboratory for underground nuclear astrophysics
+
+It is in the nature of astrophysics that many of the processes and objects one tries to understand are physically inaccessible. Thus, it is important that those aspects that can be studied in the laboratory are rather well understood. One such aspect is the nuclear fusion reactions, which are at the heart of nuclear astrophysics. They sensitively influence the nucleosynthesis of the elements in the earliest stages of the universe and in all the objects formed thereafter, and control the associated energy generation, neutrino luminosity and evolution of stars. We review a new experimental approach for the study of nuclear fusion reactions based on an underground accelerator laboratory, named LUNA.

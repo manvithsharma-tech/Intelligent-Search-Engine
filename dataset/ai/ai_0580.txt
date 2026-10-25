@@ -1,0 +1,3 @@
+Social Eye Gaze in Human-Robot Interaction: A Review
+
+This article reviews the state of the art in social eye gaze for human-robot interaction (HRI). It establishes three categories of gaze research in HRI, defined by differences in goals and methods: a human-centered approach, which focuses on people's responses to gaze; a design-centered approach, which addresses the features of robot gaze behavior and appearance that improve interaction; and a technology-centered approach, which is concentrated on the computational tools for implementing social eye gaze in robots. This paper begins with background information about gaze research in HRI and ends with a set of open questions.

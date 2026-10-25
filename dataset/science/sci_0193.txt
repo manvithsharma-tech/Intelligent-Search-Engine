@@ -1,0 +1,3 @@
+Vacuum structure for expanding geometry
+
+We consider gravitational wave modes in the Friedmann-Robertson-Walker metrics in a de Sitter phase and show that the state space splits into many unitarily inequivalent representations of the canonical commutation relations. Non-unitary time evolution is described as a trajectory in the space of the representations. The generator of time evolution is related to the entropy operator. The thermodynamic arrow of time is shown to point in the same direction as the cosmological arrow of time. The vacuum is a two-mode SU (1,1) squeezed state of thermo-field dynamics. The link between an expanding geometry, squeezing and thermal properties is exhibited.

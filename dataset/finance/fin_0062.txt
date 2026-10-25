@@ -1,0 +1,3 @@
+Stock Prices, News, and Economic Fluctuations
+
+We show that the joint behavior of stock prices and TFP favors a view of business cycles driven largely by a shock that does not affect productivity in the short run - and therefore does not look like a standard technology shock - but affects productivity with substantial delay - and therefore does not look like a monetary shock. One structural interpretation for this shock is that it represents news about future technological opportunities which is first captured in stock prices. This shock causes a boom in consumption, investment, and hours worked that precedes productivity growth by a few years, and explains about 50 percent of business cycle fluctuations.

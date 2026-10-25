@@ -1,0 +1,3 @@
+Anomalies: Foreign Exchange
+
+In what follows, we discuss the efficiency of foreign exchange markets. To manage what would otherwise be an enormous task, the question of efficiency is viewed below from the perspective of a single type of test: the test for what is called the forward discount bias. This test is easy to understand, and since it strongly rejects the null hypothesis, statistical power is not an issue. Naturally, in discussing this particular test we mention a variety of other empirical work designed to shed light on alternative explanations of the results.

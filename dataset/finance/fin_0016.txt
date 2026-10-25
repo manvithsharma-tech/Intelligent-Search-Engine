@@ -1,0 +1,3 @@
+When Is the Government Spending Multiplier Large?
+
+We argue that the government-spending multiplier can be much larger than one when the zero lower bound on the nominal interest rate binds. The larger is the fraction of government spending that occurs while the nominal interest rate is zero, the larger is the value of the multiplier. After providing intuition for these results, we investigate the size of the multiplier in a dynamic, stochastic, general equilibrium model. In this model the multiplier e'ect is substantially larger than one when the zero bound binds. Our model is consistent with the behavior of key macro aggregates during the recent financial crisis. We thank the editor, Monika Piazzesi, Rob Shimer, and two anonymous referees for their

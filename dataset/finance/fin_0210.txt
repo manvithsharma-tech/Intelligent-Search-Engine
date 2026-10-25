@@ -1,0 +1,3 @@
+A Model of Secular Stagnation: Theory and Quantitative Evaluation
+
+This paper formalizes and quantifies the secular stagnation hypothesis, defined as a persistently low or negative natural rate of interest leading to a chronically binding zero lower bound (ZLB).Output-inflation dynamics and policy prescriptions are fundamentally different from those in the standard New Keynesian framework.Using a 56-period quantitative life cycle model, a standard calibration to US data delivers a natural rate ranging from -1.5% to -2%, implying an elevated risk of ZLB episodes for the foreseeable future.We decompose the contribution of demographic and technological factors to the decline in interest rates since 1970 and quantify changes required to restore higher rates.

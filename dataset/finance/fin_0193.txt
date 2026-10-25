@@ -1,0 +1,3 @@
+New Keynesian Models: Not Yet Useful for Policy Analysis
+
+In the 1970s macroeconomists often disagreed bitterly.Macroeconomists have now largely converged on method, model design, and macroeconomic policy advice.The disagreements that remain all stem from the practical implementation of the methodology.Some macroeconomists think that New Keynesian models are on the verge of being useful for quarter-to-quarter quantitative policy advice.We do not.We argue that the shocks in these models are dubiously structural and show that many of the features of the model as well as the implications due to these features are inconsistent with microeconomic evidence.These arguments lead us to conclude that New Keynesian models are not yet useful for policy analysis.

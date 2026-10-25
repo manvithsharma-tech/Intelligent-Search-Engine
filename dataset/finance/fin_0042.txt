@@ -1,0 +1,3 @@
+Measuring the Natural Rate of Interest
+
+The natural rate of interest -- the real interest rate consistent with output equaling its natural rate and stable inflation -- plays a central role in macroeconomic theory and monetary policy. Estimation of the natural rate of interest, however, has received little attention. We apply the Kalman filter to estimate jointly time-varying natural rates of interest and output and trend growth. We find a close link between the natural rate of interest and the trend growth rate, as predicted by theory. Estimates of the natural rate of interest, however, are very imprecise and subject to considerable real-time measurement error.

@@ -1,0 +1,3 @@
+Wholesale Funding Dry‐Ups
+
+ABSTRACT We empirically explore the fragility of wholesale funding of banks, using transaction‐level data on short‐term, unsecured certificates of deposit in the European market. We do not observe a market‐wide freeze during the 2008 to 2014 period. Yet, many banks suddenly experience funding dry‐ups. Dry‐ups predict, but do not cause, future deterioration in bank performance. Furthermore, during periods of market stress, banks with high future performance tend to increase reliance on wholesale funding. We therefore fail to find evidence consistent with adverse selection models of funding market freezes. Our evidence is in line with theories highlighting heterogeneity between informed and uninformed lenders.

@@ -1,0 +1,3 @@
+Flake Electrical Conductivity of Few-Layer Graphene
+
+The Kubo formula for the electrical conductivity of per stratum of few-layer graphene, up to five, is analytically calculated in both simple and Bernal structures within the tight-binding Hamiltonian model and Green's function technique, compared with the single-layer one. The results show that, by increasing the layers of the graphene as well as the interlayer hopping of the nonhybridized p z orbitals, this conductivity decreases. Although the change in its magnitude varies less as the layer number increases to beyond two,distinguishably, at low temperatures, it exhibits a small deviation from linear behavior. Moreover, the simple bilayer graphene represents more conductivity with respect to the Bernal case.

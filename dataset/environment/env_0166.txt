@@ -1,0 +1,3 @@
+Complex hydrides for hydrogen storage - new perspectives
+
+Since the 1970s, hydrogen has been considered as a possible energy carrier for the storage of renewable energy. The main focus has been on addressing the ultimate challenge: developing an environmentally friendly successor for gasoline. This very ambitious goal has not yet been fully reached, as discussed in this review, but a range of new lightweight hydrogen-containing materials has been discovered with fascinating properties. State-of-the-art and future perspectives for hydrogen-containing solids will be discussed, with a focus on metal borohydrides, which reveal significant structural flexibility and may have a range of new interesting properties combined with very high hydrogen densities.

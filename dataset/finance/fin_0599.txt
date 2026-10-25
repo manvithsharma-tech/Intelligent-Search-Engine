@@ -1,0 +1,3 @@
+Financial Transaction Taxes, Market Composition, and Liquidity
+
+ABSTRACT We use the introduction of a financial transaction tax (FTT) in France in 2012 to test competing theories on its impact. We find no support for the idea that an FTT improves market quality by affecting the composition of trading volume. Instead, our results are in line with the hypothesis that a lower trading volume reduces liquidity and in turn market quality. Consistent with theories of asset pricing under transaction costs, we document a shift in security holdings from short‐term to long‐term investors. Finally, we find that moderate aggregate effects on market quality can mask large adjustments made by individual agents.

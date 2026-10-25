@@ -1,0 +1,3 @@
+The Twin Crises: The Causes of Banking and Balance-of-Payments Problems
+
+In the wake of the ERM and Mexican currency crises, the subject of balance-of-payments crises has come to the forefront of academic and policy discussions. This paper focuses on the potential links between banking and balance-of-payments crises. We examine these episodes for a large number of countries and find that knowing that there are banking problems helps in predicting balance-of-payments crises, but the converse is not true; financial liberalization usually predates banking crises, indeed, it helps predict them. Rather than a causal relationship from banking to balance-of-payments crises, the macroeconomic "stylized facts" that characterize these episodes point to common causes.

@@ -1,0 +1,3 @@
+Equilibrium Unemployment, Job Flows, and Inflation Dynamics
+
+In order to explain the joint fluctuations of output, inflation and the labor market, this paper develops and estimates a general equilibrium model that integrates a theory of equilibrium unemployment into a monetary model with nominal price rigidities. The estimated model accounts for the responses of employment, hours per worker, job creation, and job destruction to a monetary policy shock. Moreover, search frictions in the labor market generate a lower elasticity of marginal costs with respect to output. This helps to explain the sluggishness of inflation and the persistence of output that are observed in the data.

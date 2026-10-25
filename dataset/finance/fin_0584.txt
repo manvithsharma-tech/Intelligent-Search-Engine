@@ -1,0 +1,3 @@
+Rating opaque borrowers: why are unsolicited ratings lower?
+
+Abstract This paper examines why unsolicited ratings tend to be lower than solicited ratings. Both self-selection among issuers and strategic conservatism of rating agencies may be reasonable explanations. Analyses of default incidences of non-U.S. borrowers between January 1996 and December 2006 show that rating conservatism may play a role for industrial firms, but self-selection cannot be fully rejected. Neither can it for insurance companies, though data restrictions impede further conclusions. For unsolicited bank ratings, however, we find strong evidence that rating conservatism is an important cause. The downward bias also appears to increase along with banks' opaqueness.

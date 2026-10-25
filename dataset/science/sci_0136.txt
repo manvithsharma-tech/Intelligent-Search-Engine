@@ -1,0 +1,3 @@
+Fine Structure of Dark Energy and New Physics
+
+Following our recent work on the cosmological constant problem, in this letter we make a specific proposal regarding the fine structure (i.e., the spectrum) of dark energy. The proposal is motivated by a deep analogy between the blackbody radiation problem, which led to the development of quantum theory, and the cosmological constant problem, for which we have recently argued calls for a conceptual extension of the quantum theory. We argue that the fine structure of dark energy is governed by a Wien distribution, indicating its dual quantum and classical nature. We discuss observational consequences of such a picture of dark energy and constrain the distribution function.

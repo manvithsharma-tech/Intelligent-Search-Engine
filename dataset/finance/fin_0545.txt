@@ -1,0 +1,3 @@
+The Limits of Model‐Based Regulation
+
+ABSTRACT Using loan‐level data from Germany, we investigate how the introduction of model‐based capital regulation affected banks' ability to absorb shocks. The objective of this regulation was to enhance financial stability by making capital requirements responsive to asset risk. Our evidence suggests that banks "optimized" model‐based regulation to lower their capital requirements. Banks systematically underreported risk, with underreporting more pronounced for banks with higher gains from it. Moreover, large banks benefitted from the regulation at the expense of smaller banks. Overall, our results suggest that sophisticated rules may have undesired effects if strategic misbehavior is difficult to detect.

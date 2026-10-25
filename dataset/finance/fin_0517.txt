@@ -1,0 +1,3 @@
+Do Intermediaries Matter for Aggregate Asset Prices?
+
+ABSTRACT Poor financial health of intermediaries coincides with low asset prices and high risk premiums. Is this because intermediaries matter for asset prices, or because their health correlates with economy‐wide risk aversion? In the first case, return predictability should be more pronounced for asset classes in which households are less active. We provide evidence supporting this prediction, suggesting that a quantitatively sizable fraction of risk premium variation in several large asset classes such as credit or mortgage‐backed securities (MBS) is due to intermediaries. Movements in economy‐wide risk aversion create the opposite pattern, and we find this channel also matters.

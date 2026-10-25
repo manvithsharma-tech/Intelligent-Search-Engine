@@ -1,0 +1,3 @@
+Measuring Liquidity Mismatch in the Banking Sector
+
+ABSTRACT This paper constructs a liquidity mismatch index (LMI) to gauge the mismatch between the market liquidity of assets and the funding liquidity of liabilities, for 2,882 bank holding companies over 2002 to 2014. The aggregate LMI decreases from +$4 trillion precrisis to −$6 trillion in 2008. We conduct an LMI stress test revealing the fragility of the banking system in early 2007. Moreover, LMI predicts a bank's stock market crash probability and borrowing decisions from the government during the financial crisis. The LMI is therefore informative about both individual bank liquidity and the liquidity risk of the entire banking system.

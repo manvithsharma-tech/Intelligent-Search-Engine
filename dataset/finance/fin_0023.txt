@@ -1,0 +1,3 @@
+Fiscal policy and economic growth
+
+This paper describes the empirical regularities relating fiscal policy variables, the level of development, and the rate of growth. We employ historical data, recent cross-section data and newly constructed public investment series. Our main findings are: (i) there is a strong association between the development level and the fiscal structure: poor countries rely heavily on international trade taxes, while income taxes are only important in developed economies; (ii) fiscal policy is influenced by the scale of the economy, measured by its population; (iii) investment in transport and communication is consistently correlated with growth; (iv) the effects of taxation are difficult to isolate empirically.

@@ -1,0 +1,3 @@
+Determinants and Impact of Sovereign Credit Ratings
+
+The authors conduct the first systematic analysis of the determinants and impact of the sovereign credit ratings assigned by the two leading U.S. agencies, Moody's Investor Services and Standard and Poor's. Of the large number of criteria used by the two agencies, six factors appear to play an important role in determining a country's credit rating: per capita income, GDP growth, inflation, external debt, level of economic development, and default history. In addition, the authors find that sovereign ratings influence market yields--particularly those on non-investment-grade issues--independently of any correlation with publicly available information.

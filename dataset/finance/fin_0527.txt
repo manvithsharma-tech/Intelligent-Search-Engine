@@ -1,0 +1,3 @@
+Sovereign Credit Ratings Methodology
+
+This paper describes and evaluates the sovereign credit ratings methodologies of Standard & Poor's, Moody's Investors Service, and Fitch Ratings. A simple definition of ratings failure-based on ratings stability-is proposed and tested, pointing to falling failure rates, consistent upside bias, and strong interagency correlation. Possible causes of ratings failure are separated into informational, analytical, revenue bias, and other incentive problems, each of which is discussed. The paper seeks to highlight methodological developments after the Asian crisis, particularly with regard to the estimation of contingent liabilities and the assessment of international reserves adequacy.

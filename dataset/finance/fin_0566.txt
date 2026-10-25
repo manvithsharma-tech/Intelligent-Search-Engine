@@ -1,0 +1,3 @@
+What Hinders Investment in the Aftermath of Financial Crises: Insolvent Firms or Illiquid Banks?
+
+We quantify the effects of lending and balance sheet channels on corporate investment during large devaluations. We find that if currency crises are accompanied by banking crises, domestic exporters holding unhedged foreign currency debt decrease investment while foreign exporters with better access to credit increase investment despite their unhedged foreign currency debt. We do not find such a differential effect under pure currency crises. Using firm-bank matched data during the global financial crisis, we showthat both domestic and foreign-owned firms experienced a decline in bank credit from affected banks; however, foreign-owned firms substituted the lost credit.

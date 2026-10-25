@@ -1,0 +1,3 @@
+Nonperforming Loans and Macrofinancial Vulnerabilities in Advanced Economies
+
+We analyze the link between nonperforming loans (NPL) and macroeconomic performance using two complementary approaches. First, we investigate the macroeconomic determinants of NPL in panel regressions and confirm that adverse macroeconomic developments are associated with rising NPL. Second, we investigate the feedback between NPL and its macroeconomic determinants in a panel vector autoregressive (PVAR) model. The impulse response functions (IRFs) attribute to NPL a central role in the linkages between credit market frictions and macrofinancial vulnerability. They suggest that a sharp increase in NPL triggers long-lived tailwinds that cripple macroeconomic performance from several fronts.

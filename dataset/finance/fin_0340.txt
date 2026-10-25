@@ -1,0 +1,3 @@
+Sovereign Defaults: The Price of Haircuts
+
+A main puzzle in the sovereign debt literature is that defaults have only minor effects on subsequent borrowing costs and access to credit. This paper comes to a different conclusion. We construct the first complete database of investor losses ('haircuts') in all restructurings with foreign banks and bondholders from 1970 until 2010, covering 180 cases in 68 countries. We then show that restructurings involving higher haircuts are associated with significantly higher subsequent bond yield spreads and longer periods of capital market exclusion. The results cast doubt on the widespread belief that credit markets 'forgive and forget.'

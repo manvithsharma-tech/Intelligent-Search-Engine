@@ -1,0 +1,3 @@
+Credit Constraints and Growth in a Global Economy
+
+We show that in an open-economy OLG model, the interaction between growth differentials and household credit constraints -- more severe in fast-growing countries -- can explain three prominent global trends: a divergence in private saving rates between advanced and emerging economies, large net capital outflows from the latter, and a sustained decline in the world interest rate. Micro-level evidence on the evolution of age-saving profiles in the US and China corroborates our mechanism. Quantitatively, our model explains about a third of the divergence in aggregate saving rates, and a significant portion of the variations in age-saving profiles across countries and over time. (JEL E21, E22, F21, F32, F41, O16, P24)

@@ -1,0 +1,3 @@
+Sovereign Credit Risk, Banks' Government Support, and Bank Stock Returns around the World
+
+We explore the joint effect of expected government support to banks and changes in sovereign credit ratings on bank stock returns using data for banks in 37 countries between 1995 and 2011. We find that sovereign credit rating downgrades have a large negative effect on bank stock returns for those banks that are expected to receive stronger support from their governments. This result is stronger for banks in advanced economies where governments are better positioned to provide that support. Our results suggest that stock market investors perceive sovereigns and domestic banks as markedly interconnected, partly through government guarantees.

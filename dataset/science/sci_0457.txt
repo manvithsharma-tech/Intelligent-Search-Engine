@@ -1,0 +1,3 @@
+Polymers and biopolymers at interfaces
+
+This review updates recent progress in the understanding of the behaviour of polymers at surfaces and interfaces, highlighting examples in the areas of wetting, dewetting, crystallization, and 'smart' materials. Recent developments in analysis tools have yielded a large increase in the study of biological systems, and some of these will also be discussed, focussing on areas where surfaces are important. These areas include molecular binding events and protein adsorption as well as the mapping of the surfaces of cells. Important techniques commonly used for the analysis of surfaces and interfaces are discussed separately to aid the understanding of their application.
