@@ -69,7 +69,7 @@ public class SearchServer {
         this.documents = reader.readDocuments();
         System.out.println("Loaded " + documents.size() + " documents across multi-domain dataset.");
 
-        this.documentMap = new HashMap<>();
+        this.documentMap = new HashMap<>(131072, 0.75f);
         this.categoryCounts = new TreeMap<>();
         for (Document doc : documents) {
             documentMap.put(doc.getId(), doc);
@@ -85,10 +85,13 @@ public class SearchServer {
 
         for (Document document : documents) {
             List<String> words = preprocessor.preprocess(document.getContent());
+            document.setWordCount(words.size());
             invertedIndex.addDocument(document, words);
-            for (String word : words) {
-                trie.insert(word);
-            }
+        }
+        invertedIndex.finalizeIndex();
+
+        for (String term : invertedIndex.getTerms()) {
+            trie.insert(term);
         }
 
         System.out.println("Indexed " + invertedIndex.getNumberOfTerms() + " unique vocabulary terms.");

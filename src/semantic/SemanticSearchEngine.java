@@ -75,25 +75,13 @@ public class SemanticSearchEngine {
             String metaJson = Files.readString(metaPath, StandardCharsets.UTF_8);
             parseMetadata(metaJson);
 
-            // 2. Load Document Vectors (Big-Endian float32)
-            byte[] docBytes = Files.readAllBytes(docVecPath);
+            // 2. Load Document Vectors (Big-Endian float32) via 64KB streaming buffer
             int expectedDocFloats = totalDocuments * dimensions;
-            if (docBytes.length != expectedDocFloats * 4) {
-                throw new IllegalStateException("doc_vectors.bin size mismatch: expected "
-                        + (expectedDocFloats * 4) + " bytes, found " + docBytes.length);
-            }
-            this.docVectors = new float[expectedDocFloats];
-            ByteBuffer.wrap(docBytes).order(ByteOrder.BIG_ENDIAN).asFloatBuffer().get(docVectors);
+            this.docVectors = loadDenseFloats(docVecPath, expectedDocFloats);
 
-            // 3. Load Term Vectors (Big-Endian float32)
-            byte[] termBytes = Files.readAllBytes(termVecPath);
+            // 3. Load Term Vectors (Big-Endian float32) via 64KB streaming buffer
             int expectedTermFloats = totalVocabulary * dimensions;
-            if (termBytes.length != expectedTermFloats * 4) {
-                throw new IllegalStateException("term_vectors.bin size mismatch: expected "
-                        + (expectedTermFloats * 4) + " bytes, found " + termBytes.length);
-            }
-            this.termVectors = new float[expectedTermFloats];
-            ByteBuffer.wrap(termBytes).order(ByteOrder.BIG_ENDIAN).asFloatBuffer().get(termVectors);
+            this.termVectors = loadDenseFloats(termVecPath, expectedTermFloats);
 
             this.available = true;
             long loadDuration = System.currentTimeMillis() - startTime;
@@ -105,6 +93,35 @@ public class SemanticSearchEngine {
             System.err.println("[SemanticSearchEngine] Initialization error: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Streams binary float vectors directly into flat float array using 64KB buffer,
+     * avoiding multi-megabyte temporary byte[] allocations on constrained heaps.
+     */
+    private float[] loadDenseFloats(Path path, int expectedFloats) throws IOException {
+        long fileSize = Files.size(path);
+        if (fileSize != (long) expectedFloats * 4) {
+            throw new IllegalStateException(path.getFileName() + " size mismatch: expected "
+                    + ((long) expectedFloats * 4) + " bytes, found " + fileSize);
+        }
+
+        float[] floats = new float[expectedFloats];
+        try (InputStream is = new BufferedInputStream(Files.newInputStream(path), 64 * 1024)) {
+            byte[] chunk = new byte[64 * 1024];
+            ByteBuffer bb = ByteBuffer.wrap(chunk).order(ByteOrder.BIG_ENDIAN);
+            int floatIdx = 0;
+            int bytesRead;
+            while ((bytesRead = is.read(chunk)) != -1) {
+                bb.position(0);
+                bb.limit(bytesRead);
+                int floatCount = bytesRead / 4;
+                for (int i = 0; i < floatCount; i++) {
+                    floats[floatIdx++] = bb.getFloat();
+                }
+            }
+        }
+        return floats;
     }
 
     /**
@@ -142,6 +159,10 @@ public class SemanticSearchEngine {
                     int nextQuote = arrContent.indexOf('"', p + 1);
                     if (nextQuote == -1) break;
                     String id = arrContent.substring(p + 1, nextQuote);
+                    Document existingDoc = documentMap.get(id);
+                    if (existingDoc != null) {
+                        id = existingDoc.getId();
+                    }
                     docIds[idx] = id;
                     docIdToIndex.put(id, idx);
                     idx++;
@@ -162,7 +183,7 @@ public class SemanticSearchEngine {
                 while (idx < totalDocuments && (p = arrContent.indexOf('"', p)) != -1) {
                     int nextQuote = arrContent.indexOf('"', p + 1);
                     if (nextQuote == -1) break;
-                    docCategories[idx] = arrContent.substring(p + 1, nextQuote);
+                    docCategories[idx] = arrContent.substring(p + 1, nextQuote).intern();
                     idx++;
                     p = nextQuote + 1;
                 }

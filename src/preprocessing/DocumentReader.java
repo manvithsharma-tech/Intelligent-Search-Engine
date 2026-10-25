@@ -78,7 +78,7 @@ public class DocumentReader {
                             fileName.lastIndexOf(".")
                     );
 
-                    String categoryName = category.getName();
+                    String categoryName = category.getName().intern();
 
                     Document doc = new Document(
                             id,

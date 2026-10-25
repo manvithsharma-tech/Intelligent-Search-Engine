@@ -41,17 +41,14 @@ public class Main {
 
         // Process every document
         for (Document document : documents) {
-
-            List<String> words =
-                    preprocessor.preprocess(document.getContent());
-
-            // Add words to the inverted index
+            List<String> words = preprocessor.preprocess(document.getContent());
+            document.setWordCount(words.size());
             invertedIndex.addDocument(document, words);
+        }
+        invertedIndex.finalizeIndex();
 
-            // Add the same vocabulary to the compressed Trie
-            for (String word : words) {
-                trie.insert(word);
-            }
+        for (String term : invertedIndex.getTerms()) {
+            trie.insert(term);
         }
 
         // 4. DISPLAY INDEX INFORMATION

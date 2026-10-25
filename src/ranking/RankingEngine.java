@@ -19,10 +19,14 @@ public class RankingEngine {
         this.documents = documents;
         this.invertedIndex = invertedIndex;
 
-        this.docLengths = new HashMap<>();
+        this.docLengths = new HashMap<>(documents.size() + 16, 0.75f);
         long totalTokens = 0;
         for (Document doc : documents) {
-            int len = countWords(doc.getContent());
+            int len = doc.getWordCount();
+            if (len < 0) {
+                len = countWords(doc.getContent());
+                doc.setWordCount(len);
+            }
             docLengths.put(doc.getId(), len);
             totalTokens += len;
         }
@@ -36,31 +40,21 @@ public class RankingEngine {
             String term,
             Document document) {
 
-        String text =
-                document.getContent().toLowerCase();
-
-        text = text.replaceAll(
-                "[^a-z0-9\\s]",
-                " "
-        );
-
-        String[] words =
-                text.split("\\s+");
-
-        int count = 0;
-
-        for (String word : words) {
-
-            if (word.equals(term)) {
-                count++;
-            }
+        int count = countTermOccurrences(term, document);
+        if (count == 0) {
+            return 0.0;
         }
 
-        if (words.length == 0) {
-            return 0;
+        int totalWords = docLengths.getOrDefault(document.getId(), 0);
+        if (totalWords <= 0) {
+            totalWords = countWords(document.getContent());
         }
 
-        return (double) count / words.length;
+        if (totalWords == 0) {
+            return 0.0;
+        }
+
+        return (double) count / totalWords;
     }
 
     // -----------------------------------------
@@ -111,21 +105,62 @@ public class RankingEngine {
     // -----------------------------------------
     private int countWords(String text) {
         if (text == null || text.isEmpty()) return 0;
-        String clean = text.toLowerCase().replaceAll("[^a-z0-9\\s]", " ");
-        String[] words = clean.split("\\s+");
         int count = 0;
-        for (String w : words) {
-            if (!w.isEmpty()) count++;
+        boolean inWord = false;
+        int len = text.length();
+        for (int i = 0; i < len; i++) {
+            char c = text.charAt(i);
+            boolean isWordChar = (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9');
+            if (isWordChar) {
+                if (!inWord) {
+                    count++;
+                    inWord = true;
+                }
+            } else {
+                inWord = false;
+            }
         }
         return count;
     }
 
     private int countTermOccurrences(String term, Document document) {
-        String text = document.getContent().toLowerCase().replaceAll("[^a-z0-9\\s]", " ");
-        String[] words = text.split("\\s+");
+        if (term == null || term.isEmpty() || document == null) return 0;
+        String text = document.getContent();
+        if (text == null || text.isEmpty()) return 0;
+
         int count = 0;
-        for (String w : words) {
-            if (w.equals(term)) count++;
+        int termLen = term.length();
+        int textLen = text.length();
+
+        for (int i = 0; i <= textLen - termLen; ) {
+            // Check word boundary at start
+            if (i > 0) {
+                char prev = text.charAt(i - 1);
+                if ((prev >= 'a' && prev <= 'z') || (prev >= 'A' && prev <= 'Z') || (prev >= '0' && prev <= '9')) {
+                    i++;
+                    continue;
+                }
+            }
+
+            // Case-insensitive match against term
+            if (text.regionMatches(true, i, term, 0, termLen)) {
+                // Check word boundary at end
+                int nextIdx = i + termLen;
+                if (nextIdx == textLen) {
+                    count++;
+                    i = nextIdx;
+                } else {
+                    char next = text.charAt(nextIdx);
+                    if (!((next >= 'a' && next <= 'z') || (next >= 'A' && next <= 'Z') || (next >= '0' && next <= '9'))) {
+                        count++;
+                        i = nextIdx;
+                    } else {
+                        i++;
+                    }
+                }
+            } else {
+                i++;
+            }
         }
         return count;
     }

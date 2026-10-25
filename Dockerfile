@@ -34,5 +34,7 @@ COPY workspace.json ./workspace.json
 ENV PORT=8080
 EXPOSE 8080
 
-# Launch server
-CMD ["sh", "-c", "java -cp out server.SearchServer"]
+# Launch server with memory-optimized JVM settings tailored for 512MB containers:
+# - SerialGC eliminates G1GC region/card table memory overhead
+# - Max heap 384m (75% of 512MB RAM), leaving 128MB for metaspace, thread stacks, and OS
+CMD ["sh", "-c", "java -XX:+UseSerialGC -Xms128m -Xmx384m -XX:+ExitOnOutOfMemoryError -cp out server.SearchServer"]

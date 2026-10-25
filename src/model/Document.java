@@ -6,12 +6,21 @@ public class Document {
     private String category;
     private String fileName;
     private String content;
+    private int wordCount = -1;
 
     public Document(String id, String category, String fileName, String content) {
         this.id = id;
         this.category = category;
         this.fileName = fileName;
         this.content = content;
+    }
+
+    public int getWordCount() {
+        return wordCount;
+    }
+
+    public void setWordCount(int wordCount) {
+        this.wordCount = wordCount;
     }
 
     public String getId() {
